@@ -15,9 +15,11 @@
     "url": "https://github.com/infinum/eslint-config/issues"
   },
   "homepage": "https://github.com/infinum/eslint-config#readme",
-  "peerDependencies": {
-    "eslint": "^4.10.0",
+  "dependencies": {
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0"
+  },
+  "peerDependencies": {
+    "eslint": "^4.10.0",
   }
 }
