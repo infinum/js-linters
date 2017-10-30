@@ -1,16 +1,14 @@
 {
   "name": "@infinumjs/eslint-config",
-  "version": "1.0.0",
-  "description": "Infinum ESLint config",
+  "version": "0.1.0",
+  "description": "Infinu's' ESLint rules",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/infinum/eslint-config.git"
   },
-  "license": "ISC",
+  "author": "Infinum JavaScript Team <hello@infinum.co>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/infinum/eslint-config/issues"
   },
