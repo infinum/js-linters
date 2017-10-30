@@ -1,0 +1,23 @@
+{
+  "name": "eslint-config",
+  "version": "1.0.0",
+  "description": "Infinum ESLint config",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/infinum/eslint-config.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/infinum/eslint-config/issues"
+  },
+  "homepage": "https://github.com/infinum/eslint-config#readme",
+  "peerDependencies": {
+    "eslint": "^4.10.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
+  }
+}
