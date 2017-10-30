@@ -1,5 +1,5 @@
 {
-  "name": "infinumjs/eslint-config",
+  "name": "@infinumjs/eslint-config",
   "version": "1.0.0",
   "description": "Infinum ESLint config",
   "main": "index.js",
