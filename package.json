@@ -16,7 +16,6 @@
   },
   "homepage": "https://github.com/infinum/eslint-config#readme",
   "dependencies": {
-    "eslint": "^4.10.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
