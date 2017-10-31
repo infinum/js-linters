@@ -1,5 +1,9 @@
 module.exports = {
-  extends: ['../index.js'],
+  plugins: [
+    'react',
+    'jsx-a11y'
+  ],
+  extends: ['../index.js', 'plugin:jsx-a11y/recommended', 'plugin:react/all'],
   rules: {
 
     // overridden react rules
@@ -16,6 +20,9 @@ module.exports = {
     }],
     'react/prefer-stateless-function': 1,
     'react/prop-types': 1,
+    'react/jsx-indent': [2, 2],
+    'react/jsx-indent-props': [2, 2],
+    'react/jsx-no-literals': 0,
 
     // overridden import rules
     'import/prefer-default-export': 2,
