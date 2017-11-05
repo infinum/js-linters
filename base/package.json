@@ -1,7 +1,7 @@
 {
   "name": "@infinumjs/eslint-config",
-  "version": "0.1.0",
-  "description": "Infinu's' ESLint rules",
+  "version": "1.0.0",
+  "description": "Infinum's ESLint rules",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -14,15 +14,14 @@
   },
   "homepage": "https://github.com/infinum/eslint-config#readme",
   "dependencies": {
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-react": "^7.4.0"
-  },
-  "peerDependencies": {
-    "eslint": "^4.10.0"
+    "eslint-config-airbnb-base": "^12.1.0"
   },
   "devDependencies": {
-    "react": "^16.0.0"
+    "eslint": "4.x",
+    "eslint-plugin-import": "2.x"
+  },
+  "peerDependencies": {
+    "eslint": "4.x",
+    "eslint-plugin-import": "2.x"
   }
 }

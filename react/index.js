@@ -3,7 +3,7 @@ module.exports = {
     'react',
     'jsx-a11y'
   ],
-  extends: ['../index.js', 'plugin:jsx-a11y/recommended', 'plugin:react/all'],
+  extends: ['@infinumjs', 'plugin:jsx-a11y/recommended', 'plugin:react/all'],
   rules: {
 
     // overridden react rules
