@@ -324,7 +324,7 @@ module.exports = {
     ],
     'space-unary-ops': 1,
     'spaced-comment': [
-      2, 'always'
+      2, 'always', { 'markers': ['='] }
     ],
     'wrap-regex': 2,
 
