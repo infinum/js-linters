@@ -5,14 +5,14 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/infinum/eslint-config.git"
+    "url": "git+https://github.com/infinum/js-linters.git"
   },
   "author": "Infinum JavaScript Team <hello@infinum.co>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/infinum/eslint-config/issues"
+    "url": "https://github.com/infinum/js-linters/issues"
   },
-  "homepage": "https://github.com/infinum/eslint-config#readme",
+  "homepage": "https://github.com/infinum/js-linters#readme",
   "dependencies": {
     "eslint-config-airbnb-base": "^12.1.0"
   },
