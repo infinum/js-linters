@@ -365,6 +365,7 @@ module.exports = {
     'template-curly-spacing': [
       1, 'never'
     ],
-    'yield-star-spacing': [1, 'before']
+    'yield-star-spacing': [1, 'before'],
+    'class-methods-use-this': 0
   }
 };
