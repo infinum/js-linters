@@ -29,7 +29,7 @@ module.exports = {
     */
 
     'comma-dangle': [
-      1, 'never'
+      'error', 'always-multiline'
     ],
     'no-cond-assign': [
       2, 'always'
