@@ -23,6 +23,7 @@ module.exports = {
     'react/jsx-indent': [2, 2],
     'react/jsx-indent-props': [2, 2],
     'react/jsx-no-literals': 0,
+    'react/no-set-state': 1,
 
     // overridden import rules
     'import/prefer-default-export': 2,
