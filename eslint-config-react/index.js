@@ -1,22 +1,22 @@
 module.exports = {
   plugins: [
     'react',
-    'jsx-a11y'
+    'jsx-a11y',
   ],
   extends: ['@infinumjs', 'plugin:jsx-a11y/recommended', 'plugin:react/all'],
   rules: {
 
     // overridden react rules
     'react/jsx-max-props-per-line': [1, {
-      maximum: 1
+      maximum: 1,
     }],
     'react/jsx-no-bind': [1, {
       ignoreRefs: false,
       allowArrowFunctions: false,
-      allowBind: false
+      allowBind: false,
     }],
     'react/jsx-filename-extension': [1, {
-      extensions: ['.js', '.jsx']
+      extensions: ['.js', '.jsx'],
     }],
     'react/prefer-stateless-function': 1,
     'react/prop-types': 1,
@@ -29,7 +29,7 @@ module.exports = {
     'import/prefer-default-export': 2,
     'import/extensions': 0,
     'import/no-extraneous-dependencies': [2, {
-      devDependencies: true
+      devDependencies: true,
     }],
 
     'no-unused-vars': 1,
@@ -44,9 +44,9 @@ module.exports = {
         'componentWillUpdate',
         'componentDidUpdate',
         'componentWillUnmount',
-        'componentDidCatch'
-      ]
+        'componentDidCatch',
+      ],
     }],
-    'object-curly-spacing': 0
-  }
+    'object-curly-spacing': 0,
+  },
 };
