@@ -19,8 +19,8 @@ module.exports = {
       objectLiteralShorthandProperties: true,
       spread: true,
       superInFunctions: true,
-      templateStrings: true
-    }
+      templateStrings: true,
+    },
   },
   rules: {
 
@@ -29,10 +29,10 @@ module.exports = {
     */
 
     'comma-dangle': [
-      'error', 'always-multiline'
+      'error', 'always-multiline',
     ],
     'no-cond-assign': [
-      2, 'always'
+      2, 'always',
     ],
     'no-console': 1,
     'no-constant-condition': 1,
@@ -46,7 +46,7 @@ module.exports = {
     'no-ex-assign': 2,
     'no-extra-boolean-cast': 1,
     'no-extra-parens': [
-      2, 'functions'
+      2, 'functions',
     ],
     'no-extra-semi': 2,
     'no-func-assign': 2,
@@ -73,17 +73,17 @@ module.exports = {
     complexity: 0,
     'consistent-return': 1,
     curly: [
-      2, 'all'
+      2, 'all',
     ],
     'default-case': 2,
     'dot-location': [
-      1, 'property'
+      1, 'property',
     ],
     'dot-notation': [
       2, {
         allowKeywords: true,
-        allowPattern: '^[a-z](_[a-z])$' //
-      }
+        allowPattern: '^[a-z](_[a-z])$', //
+      },
     ],
     eqeqeq: 2,
     'guard-for-in': 2,
@@ -104,8 +104,8 @@ module.exports = {
     'no-implicit-coercion': [
       2, {
         number: true,
-        boolean: false
-      }
+        boolean: false,
+      },
     ],
     'no-implicit-globals': 0,
     'no-implied-eval': 2,
@@ -125,8 +125,8 @@ module.exports = {
     'no-octal-escape': 2,
     'no-param-reassign': [
       2, {
-        props: false
-      }
+        props: false,
+      },
     ],
     'no-proto': 2,
     'no-redeclare': 2,
@@ -147,7 +147,7 @@ module.exports = {
     radix: 2,
     'vars-on-top': 0,
     'wrap-iife': [
-      2, 'inside'
+      2, 'inside',
     ],
     yoda: 2,
 
@@ -168,8 +168,8 @@ module.exports = {
     'no-restricted-globals': 0,
     'no-shadow': [
       1, {
-        hoist: 'all'
-      }
+        hoist: 'all',
+      },
     ],
     'no-shadow-restricted-names': 2,
     'no-undef': 2,
@@ -178,8 +178,8 @@ module.exports = {
     'no-unused-vars': [
       1, {
         vars: 'local',
-        args: 'after-used'
-      }
+        args: 'after-used',
+      },
     ],
     'no-use-before-define': 2,
 
@@ -188,32 +188,32 @@ module.exports = {
     */
 
     'array-bracket-spacing': [
-      2, 'never'
+      2, 'never',
     ],
     'block-spacing': 2,
     'brace-style': [
       2,
       '1tbs', {
-        allowSingleLine: false
-      }
+        allowSingleLine: false,
+      },
     ],
     camelcase: [
       2, {
-        properties: 'always'
-      }
+        properties: 'always',
+      },
     ],
     'comma-spacing': [
       2, {
         before: false,
-        after: true
-      }
+        after: true,
+      },
     ],
     'comma-style': 2,
     'computed-property-spacing': [
-      2, 'never'
+      2, 'never',
     ],
     'consistent-this': [
-      1, 'self'
+      1, 'self',
     ],
     'eol-last': 2,
     'func-names': 0,
@@ -224,23 +224,23 @@ module.exports = {
     indent: [
       2,
       2, {
-        SwitchCase: 1
-      }
+        SwitchCase: 1,
+      },
     ],
     'jsx-quotes': 0,
     'key-spacing': [
       2, {
         beforeColon: false,
-        afterColon: true
-      }
+        afterColon: true,
+      },
     ],
     'keyword-spacing': 2,
     'linebreak-style': 0,
     'lines-around-comment': [
       2, {
         beforeBlockComment: true,
-        beforeLineComment: true
-      }
+        beforeLineComment: true,
+      },
     ],
     'max-depth': 0,
     'max-len': 0,
@@ -249,8 +249,8 @@ module.exports = {
     'max-statements': 0,
     'new-cap': [
       2, {
-        newIsCap: true
-      }
+        newIsCap: true,
+      },
     ],
     'new-parens': 2,
     'newline-after-var': 0,
@@ -272,59 +272,59 @@ module.exports = {
     'no-ternary': 0,
     'no-trailing-spaces': [
       2, {
-        skipBlankLines: true
-      }
+        skipBlankLines: true,
+      },
     ],
     'no-underscore-dangle': 0,
     'no-unneeded-ternary': 2,
     'no-whitespace-before-property': 2,
     'object-curly-spacing': [
-      2, 'never'
+      2, 'never',
     ],
     'one-var': [
-      2, 'never'
+      2, 'never',
     ],
     'one-var-declaration-per-line': 0,
     'operator-assignment': [
-      2, 'always'
+      2, 'always',
     ],
     'operator-linebreak': [
-      2, 'after'
+      2, 'after',
     ],
     'padded-blocks': 0,
     'quote-props': [
-      2, 'as-needed'
+      2, 'as-needed',
     ],
     quotes: [
-      2, 'single'
+      2, 'single',
     ],
     'require-jsdoc': 0,
     semi: [
-      2, 'always'
+      2, 'always',
     ],
     'semi-spacing': [
       2, {
         before: false,
-        after: true
-      }
+        after: true,
+      },
     ],
     'sort-imports': 0,
     'sort-vars': 0,
     'space-before-blocks': 2,
     'space-before-function-paren': [
-      2, 'never'
+      2, 'never',
     ],
     'space-in-parens': [
-      2, 'never'
+      2, 'never',
     ],
     'space-infix-ops': [
       2, {
-        int32Hint: false
-      }
+        int32Hint: false,
+      },
     ],
     'space-unary-ops': 1,
     'spaced-comment': [
-      2, 'always', { 'markers': ['='] }
+      2, 'always', {markers: ['=']},
     ],
     'wrap-regex': 2,
 
@@ -333,16 +333,16 @@ module.exports = {
     */
 
     'arrow-body-style': [
-      2, 'as-needed'
+      2, 'as-needed',
     ],
     'arrow-parens': [
-      2, 'always'
+      2, 'always',
     ],
     'arrow-spacing': [
       2, {
         before: true,
-        after: true
-      }
+        after: true,
+      },
     ],
     'constructor-super': 1,
     'generator-star-spacing': 0,
@@ -363,9 +363,9 @@ module.exports = {
     'prefer-template': 1,
     'require-yield': 1,
     'template-curly-spacing': [
-      1, 'never'
+      1, 'never',
     ],
     'yield-star-spacing': [1, 'before'],
-    'class-methods-use-this': 0
-  }
+    'class-methods-use-this': 0,
+  },
 };
