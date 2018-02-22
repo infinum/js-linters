@@ -1,5 +1,5 @@
 {
-  "extends": ["./tslint.json", "tslint-react"],
+  "extends": ["../tslint-config/tslint.json", "tslint-react"],
   "rules": {
     "quotemark": [true, "single", "avoid-escape", "jsx-double"],
     "jsx-no-multiline-js": false,

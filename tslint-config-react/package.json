@@ -1,7 +1,7 @@
 {
-  "name": "@infinumjs/tslint-config",
+  "name": "@infinumjs/tslint-config-react",
   "version": "2.0.0-beta.2",
-  "description": "Infinum's TSLint rules",
+  "description": "Infinum's React TSLint rules",
   "main": "tslint.json",
   "repository": {
     "type": "git",
@@ -14,6 +14,7 @@
   },
   "homepage": "https://github.com/infinum/js-linters#readme",
   "devDependencies": {
+    "react": "^16.0.0",
     "tslint": "^5.8.0",
     "tslint-react": "^3.2.0",
     "typescript": "^2.2.0"
@@ -27,6 +28,7 @@
   },
   "dependencies": {
     "tslint-microsoft-contrib": "^5.0.1",
-    "tslint-react": "^3.2.0"
+    "tslint-react": "^3.2.0",
+    "tslint-config": "file:../tslint-config"
   }
 }

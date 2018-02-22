@@ -20,14 +20,6 @@ yarn add @infinumjs/tslint-config
 }
 ```
 
-## React support
-
-```json
-{
-  "extends": "@infinumjs/tslint-config/react"
-}
-```
-
 ## License
 
 The [MIT License](LICENSE)
