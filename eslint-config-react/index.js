@@ -26,7 +26,7 @@ module.exports = {
     'react/no-set-state': 1,
 
     // overridden import rules
-    'import/prefer-default-export': 2,
+    'import/prefer-default-export': 0,
     'import/extensions': 0,
     'import/no-extraneous-dependencies': [2, {
       devDependencies: true,
