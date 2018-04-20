@@ -68,6 +68,14 @@
     "promise-must-complete": true,
     "underscore-consistent-invocation": true,
     "use-named-parameter": true,
-    "typeof-compare": true
+    "typeof-compare": true,
+    "trailing-comma": [
+      true,
+      {
+        "multiline": "always",
+        "singleline": "never",
+        "esSpecCompliant": true
+      }
+    ],
   }
 }
