@@ -367,5 +367,7 @@ module.exports = {
     ],
     'yield-star-spacing': [1, 'before'],
     'class-methods-use-this': 0,
+    'import/prefer-default-export': 0,
+    'import/named': 2
   },
 };
