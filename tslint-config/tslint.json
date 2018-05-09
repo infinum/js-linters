@@ -29,7 +29,7 @@
     "no-disable-auto-sanitization": true,
     "no-document-domain": true,
     "no-document-write": true,
-    "no-duplicate-case": true,
+    "no-duplicate-switch-case": true,
     "no-empty-line-after-opening-brace": true,
     "no-exec-script": true,
     "no-for-in": true,
@@ -68,7 +68,6 @@
     "promise-must-complete": true,
     "underscore-consistent-invocation": true,
     "use-named-parameter": true,
-    "typeof-compare": true,
     "trailing-comma": [
       true,
       {

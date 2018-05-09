@@ -1,6 +1,6 @@
 {
   "name": "@infinumjs/tslint-config",
-  "version": "2.0.0-beta.3",
+  "version": "2.0.0-beta.4",
   "description": "Infinum's TSLint rules",
   "main": "tslint.json",
   "repository": {
