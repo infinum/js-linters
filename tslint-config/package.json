@@ -14,17 +14,17 @@
   },
   "homepage": "https://github.com/infinum/js-linters#readme",
   "devDependencies": {
-    "tslint": "^5.8.0",
-    "typescript": "^2.2.0"
+    "tslint": "^5.11.0",
+    "typescript": "^2.x || ^3.x"
   },
   "peerDependencies": {
-    "tslint": "^5.8.0",
-    "typescript": "^2.2.0"
+    "tslint": "^5.11.0",
+    "typescript": "^2.x || ^3.x"
   },
   "scripts": {
     "lint": "tslint -c tslint.json 'examples/**/*.{ts,tsx}'"
   },
   "dependencies": {
-    "tslint-microsoft-contrib": "^5.0.1"
+    "tslint-microsoft-contrib": "^5.x || ^6.x"
   }
 }
