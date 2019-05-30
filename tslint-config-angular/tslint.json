@@ -7,7 +7,33 @@
   "rulesDirectory": ["codelyzer"],
   "rules": {
     "array-type": [true, "generic"],
-    "no-console": [true, "log", "info", "table"],
+    "no-console": [
+      true,
+      "log",
+      "debug",
+      "info",
+      "time",
+      "timeEnd",
+      "trace"
+    ],
+    "ordered-imports": true,
+    "trailing-comma": [
+      true,
+      {
+        "multiline": "always",
+        "singleline": "never"
+      }
+    ],
+    "prefer-readonly": {
+      "severity": "warning"
+    },
+    "variable-name": {
+      "options": ["ban-keywords", "check-format", "allow-leading-underscore"],
+      "severity": "warning"
+    },
+    "template-no-negated-async": {
+      "severity": "warning"
+    },
     "rxjs-finnish": {
       "options": [{
         "functions": false,
