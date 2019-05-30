@@ -4,9 +4,7 @@
     "tslint-angular",
     "rxjs-tslint-rules"
   ],
-  "rulesDirectory": [
-    "codelyzer"
-  ],
+  "rulesDirectory": ["codelyzer"],
   "rules": {
     "array-type": [true, "generic"],
     "no-console": [true, "log", "info", "table"],
