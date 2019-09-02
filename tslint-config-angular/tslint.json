@@ -1,0 +1,51 @@
+{
+  "extends": [
+    "tslint:recommended",
+    "tslint-angular",
+    "rxjs-tslint-rules"
+  ],
+  "rulesDirectory": ["codelyzer"],
+  "rules": {
+    "array-type": [true, "generic"],
+    "no-console": [
+      true,
+      "log",
+      "debug",
+      "info",
+      "time",
+      "timeEnd",
+      "trace"
+    ],
+    "ordered-imports": true,
+    "trailing-comma": [
+      true,
+      {
+        "multiline": "always",
+        "singleline": "never"
+      }
+    ],
+    "prefer-readonly": {
+      "severity": "warning"
+    },
+    "variable-name": {
+      "options": ["ban-keywords", "check-format", "allow-leading-underscore"],
+      "severity": "warning"
+    },
+    "template-no-negated-async": {
+      "severity": "warning"
+    },
+    "rxjs-finnish": {
+      "options": [{
+        "functions": false,
+        "methods": false,
+        "parameters": true,
+        "properties": true,
+        "variables": true
+      }],
+      "severity": "warning"
+    },
+    "rxjs-no-exposed-subjects": {
+      "severity": "warning"
+    }
+  }
+}
