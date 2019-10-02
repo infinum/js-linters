@@ -5,4 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent { }
+export class AppComponent {
+  constructor() {
+    const numItemsInLocalStorage = localStorage.length;
+    console.log(numItemsInLocalStorage);
+
+    const divs = document.querySelector('div');
+  }
+}
