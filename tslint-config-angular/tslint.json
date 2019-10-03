@@ -31,12 +31,23 @@
       "options": ["ban-keywords", "check-format", "allow-leading-underscore"],
       "severity": "warning"
     },
-    "typedef": [true,
+    "typedef": [
+      true,
       "call-signature",
       "parameter",
       "property-declaration"
     ],
-    "no-restricted-globals": [true, "window", "document", "location", "navigator", "history", "localStorage", "sessionStorage"],
+    "member-access": true,
+    "no-restricted-globals": [
+      true,
+      "window",
+      "document",
+      "location",
+      "navigator",
+      "history",
+      "localStorage",
+      "sessionStorage"
+    ],
     "template-no-negated-async": {
       "severity": "warning"
     },
