@@ -2,6 +2,7 @@ module.exports = {
   plugins: [
     'react',
     'jsx-a11y',
+    'emotion',
   ],
   extends: ['@infinumjs', 'plugin:jsx-a11y/recommended', 'plugin:react/all'],
   rules: {
