@@ -28,7 +28,7 @@
     "@angular/cli": "~8.3.2",
     "@angular/compiler-cli": "~8.2.4",
     "@angular/language-service": "~8.2.4",
-    "@infinumjs/tslint-config-angular": "^1.0.0",
+    "@infinumjs/tslint-config-angular": "^1.1.0",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
@@ -42,7 +42,7 @@
     "karma-jasmine-html-reporter": "^1.4.0",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
-    "tslint": "~5.15.0",
+    "tslint": "^5.20.0",
     "typescript": "~3.5.3"
   }
 }
