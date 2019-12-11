@@ -37,6 +37,7 @@
       "parameter",
       "property-declaration"
     ],
+    "no-inferrable-types": false,
     "member-access": true,
     "no-restricted-globals": [
       true,
