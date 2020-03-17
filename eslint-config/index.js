@@ -25,9 +25,6 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module'
   },
-  settings: {
-    polyfills: ['fetch', 'Promise', 'URL', 'object-assign'],
-  },
   overrides: [{
     files: ['*.js', '*.jsx'],
     rules: {
