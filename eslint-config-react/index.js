@@ -3,9 +3,9 @@ module.exports = {
     jest: true,
   },
   extends: [
+    '@infinumjs/eslint-config',
     'plugin:react/recommended',
     'plugin:jsx-a11y/recommended',
-    '@infinumjs',
     'prettier/react'
   ],
   plugins: ['react-hooks', 'jsx-a11y'],
