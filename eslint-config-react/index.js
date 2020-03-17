@@ -1,4 +1,7 @@
 module.exports = {
+  env: {
+    jest: true,
+  },
   extends: [
     'plugin:react/recommended',
     'plugin:jsx-a11y/recommended',
