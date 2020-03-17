@@ -25,13 +25,6 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module'
   },
-  overrides: [{
-    files: ['*.js', '*.jsx'],
-    rules: {
-      '@typescript-eslint/no-var-requires': 'off',
-      '@typescript-eslint/camelcase': 'off'
-    }
-  }],
   rules: {
     '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/interface-name-prefix': [
