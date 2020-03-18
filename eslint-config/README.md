@@ -4,7 +4,7 @@ This package provides Infinum's ESLint [shareable config](https://eslint.org/doc
 
 ## Usage
 
-1. Install with `npm install --save-dev eslint @infinumjs/eslint-config eslint-plugin-import`.
+1. Install with `npm install --save-dev eslint @infinumjs/eslint-config`.
 
 2. Add `"extends": "@infinumjs"` to your .eslintrc file.
 
