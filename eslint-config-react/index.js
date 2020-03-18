@@ -19,8 +19,6 @@ module.exports = {
     'react/prop-types': [
       'error',
       {
-        'ignore': [],
-        'customValidators': [],
         'skipUndeclared': true
       }
     ],
