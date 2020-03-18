@@ -14,16 +14,16 @@
   },
   "homepage": "https://github.com/infinum/js-linters#readme",
   "dependencies": {
-    "@infinumjs/eslint-config": "^2.0.0",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-react-hooks": "^2.5.0"
+    "@infinumjs/eslint-config": "~2.0.0",
+    "eslint-plugin-jsx-a11y": "~6.2.3",
+    "eslint-plugin-react": "~7.19.0",
+    "eslint-plugin-react-hooks": "~2.5.0"
   },
   "devDependencies": {
-    "eslint": "^6.x",
-    "react": "^16.13.0"
+    "eslint": "6.x",
+    "react": "16.x"
   },
   "peerDependencies": {
-    "eslint": "^6.x"
+    "eslint": "6.x"
   }
 }
