@@ -11,7 +11,7 @@
     "angular",
     "tslint"
   ],
-  "author": "Infinum JavaScript Team <hello@infinum.co>",
+  "author": "Infinum JavaScript Team <hello@infinum.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/infinum/js-linters/issues"

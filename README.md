@@ -13,6 +13,6 @@ The [MIT License](LICENSE)
 ## Credits
 
 eslint-config is maintained and sponsored by
-[Infinum](http://www.infinum.co).
+[Infinum](https://www.infinum.com).
 
-<img src="https://infinum.co/infinum.png" width="264">
+<img src="https://infinum.com/infinum.png" width="264">
