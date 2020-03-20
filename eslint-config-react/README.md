@@ -14,7 +14,7 @@ The [MIT License](../LICENSE)
 
 ## Credits
 
-eslint-config is maintained and sponsored by
+eslint-config-react is maintained and sponsored by
 [Infinum](http://www.infinum.co).
 
 <img src="https://infinum.co/infinum.png" width="264">
