@@ -1,6 +1,6 @@
 # eslint-config-react
 
-This package provides Infinum's React ESLint [shareable config](https://eslint.org/docs/developer-guide/shareable-configs.html).
+This package provides Infinum's ESLint React TypeScript [shareable config](https://eslint.org/docs/developer-guide/shareable-configs.html).
 
 ## Usage
 
@@ -14,7 +14,7 @@ The [MIT License](../LICENSE)
 
 ## Credits
 
-eslint-config-react is maintained and sponsored by
+@infinumjs/eslint-config-react is maintained and sponsored by
 [Infinum](https://www.infinum.com).
 
 <img src="https://infinum.com/infinum.png" width="264">

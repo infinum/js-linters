@@ -9,16 +9,13 @@ module.exports = {
     node: true,
   },
   extends: [
-    'eslint:recommended',
+    '@infinumjs/eslint-config-core-js',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
-    'prettier',
     'prettier/@typescript-eslint',
-    'prettier/standard'
   ],
   plugins: [
     '@typescript-eslint',
-    'prettier'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {

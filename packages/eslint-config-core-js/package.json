@@ -1,7 +1,7 @@
 {
-  "name": "@infinumjs/eslint-config-react",
+  "name": "@infinumjs/eslint-config-core-js",
   "version": "2.0.0",
-  "description": "Infinum's React ESLint rules",
+  "description": "Infinum's ESLint core rules",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -14,14 +14,11 @@
   },
   "homepage": "https://github.com/infinum/js-linters#readme",
   "dependencies": {
-    "@infinumjs/eslint-config": "~2.0.0",
-    "eslint-plugin-jsx-a11y": "~6.2.3",
-    "eslint-plugin-react": "~7.19.0",
-    "eslint-plugin-react-hooks": "~2.5.0"
+    "eslint-config-prettier": "~6.10.0",
+    "eslint-plugin-prettier": "~3.1.2"
   },
   "devDependencies": {
-    "eslint": "6.x",
-    "react": "16.x"
+    "eslint": "6.x"
   },
   "peerDependencies": {
     "eslint": "6.x"
