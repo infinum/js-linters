@@ -1,4 +1,4 @@
-# eslint-config-core
+# eslint-config-core-js
 
 This package provides Infinum's ESLint core [shareable config](https://eslint.org/docs/developer-guide/shareable-configs.html).
 

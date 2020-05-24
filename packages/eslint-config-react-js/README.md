@@ -1,4 +1,4 @@
-# eslint-config-react
+# eslint-config-react-js
 
 This package provides Infinum's ESLint React [shareable config](https://eslint.org/docs/developer-guide/shareable-configs.html).
 

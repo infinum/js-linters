@@ -1,4 +1,4 @@
-# eslint-config
+# eslint-config-core-ts
 
 This package provides Infinum's ESLint core TypeScript [shareable config](https://eslint.org/docs/developer-guide/shareable-configs.html).
 
