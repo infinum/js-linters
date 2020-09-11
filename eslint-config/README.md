@@ -4,7 +4,7 @@ This package provides Infinum's ESLint [shareable config](https://eslint.org/doc
 
 ## Usage
 
-1. Install with `npm install --save-dev eslint @infinumjs/eslint-config eslint-plugin-import`.
+1. Install with `npm install --save-dev eslint @infinumjs/eslint-config`.
 
 2. Add `"extends": "@infinumjs"` to your .eslintrc file.
 
@@ -15,6 +15,6 @@ The [MIT License](../LICENSE)
 ## Credits
 
 eslint-config is maintained and sponsored by
-[Infinum](http://www.infinum.co).
+[Infinum](https://www.infinum.com).
 
-<img src="https://infinum.co/infinum.png" width="264">
+<img src="https://infinum.com/infinum.png" width="264">

@@ -1,6 +1,6 @@
 {
   "name": "@infinumjs/tslint-config-angular",
-  "version": "1.2.0",
+  "version": "10.1.0",
   "description": "Infinum's Angular TSLint rules",
   "main": "tslint.json",
   "repository": {
@@ -11,26 +11,26 @@
     "angular",
     "tslint"
   ],
-  "author": "Infinum JavaScript Team <hello@infinum.co>",
+  "author": "Infinum JavaScript Team <hello@infinum.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/infinum/js-linters/issues"
   },
   "homepage": "https://github.com/infinum/js-linters#readme",
   "devDependencies": {
-    "@angular/compiler": "^8.0.0",
-    "@angular/core": "^8.0.0",
-    "rxjs": "~6.4.0",
-    "tslint": "^5.16.0",
-    "typescript": "~3.4.3",
-    "zone.js": "~0.9.1"
+    "@angular/compiler": "^10.1.1",
+    "@angular/core": "^10.1.1",
+    "rxjs": "~6.6.3",
+    "tslint": "^6.1.3",
+    "typescript": "~4.0.2",
+    "zone.js": "~0.11.1"
   },
   "peerDependencies": {
-    "tslint": "^5.16.0"
+    "tslint": ">=6"
   },
   "dependencies": {
-    "codelyzer": "^5.0.0",
-    "rxjs-tslint-rules": "^4.23.2",
-    "tslint-angular": "^3.0.2"
+    "codelyzer": "^6.0.0",
+    "rxjs-tslint-rules": "^4.34.3",
+    "tslint-angular": "^3.0.3"
   }
 }
