@@ -1,7 +1,15 @@
 {
   "extends": "@infinumjs/tslint-config-angular",
   "rules": {
-    "directive-selector": [true, "attribute", "app", "camelCase"],
+    "directive-selector": [
+      true,
+      "attribute",
+      "app",
+      "camelCase"
+    ],
+    "deprecation": {
+      "severity": "warning"
+    },
     "component-selector": [true, "element", "app", "kebab-case"]
   }
 }
