@@ -222,6 +222,9 @@
     "template-no-negated-async": {
       "severity": "warning"
     },
+    "no-any": {
+      "severity": "warning"
+    },
     "rxjs-finnish": {
       "options": [{
         "functions": false,
