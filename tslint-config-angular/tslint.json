@@ -225,6 +225,7 @@
     "no-any": {
       "severity": "warning"
     },
+    "no-empty": true,
     "rxjs-finnish": {
       "options": [{
         "functions": false,
