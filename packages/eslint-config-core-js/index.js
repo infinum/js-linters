@@ -8,16 +8,9 @@ module.exports = {
     es2020: true,
     node: true,
   },
-  extends: [
-    'eslint:recommended',
-    'prettier',
-    'prettier/standard'
-  ],
-  plugins: [
-    'prettier'
-  ],
+  extends: ['eslint:recommended'],
   parserOptions: {
     ecmaVersion: 2018,
-    sourceType: 'module'
-  }
+    sourceType: 'module',
+  },
 };
