@@ -6,4 +6,4 @@ typings/
 package-lock.json
 yarn.lock
 
-**/*.tgz
+lerna-debug.log

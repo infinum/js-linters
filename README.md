@@ -1,10 +1,10 @@
-# eslint-config
+# Infinum JS Linters
 
-This repository contains two packages that provide Infinum's ESLint rules as [shareable configs](https://eslint.org/docs/developer-guide/shareable-configs.html):
+ESLint and TSLint extensible shareable configs based on Infinum JavaScript Team's [coding styles and guidelines](https://infinum.com/handbook/books/frontend).
 
-- [Base ESLint config](eslint-config/README.md)
+## ESLint package dependencies
 
-- [React ESLint config](eslint-config-react/README.md)
+![project-diagram](https://github.com/infinum/js-linters/blob/master/package-diagram.png?raw=true)
 
 ## License
 

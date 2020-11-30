@@ -9,34 +9,28 @@ module.exports = {
     node: true,
   },
   extends: [
-    'eslint:recommended',
+    '@infinumjs/eslint-config-core-js',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
-    'prettier',
-    'prettier/@typescript-eslint',
-    'prettier/standard'
   ],
-  plugins: [
-    '@typescript-eslint',
-    'prettier'
-  ],
+  plugins: ['@typescript-eslint'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2018,
-    sourceType: 'module'
+    sourceType: 'module',
   },
   rules: {
     '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/naming-convention': [
       'error',
       {
-        'selector': 'interface',
-        'format': ['PascalCase'],
-        'custom': {
-          'regex': '^I[A-Z]',
-          'match': true
-        }
-      }
+        selector: 'interface',
+        format: ['PascalCase'],
+        custom: {
+          regex: '^I[A-Z]',
+          match: true,
+        },
+      },
     ],
-  }
+  },
 };

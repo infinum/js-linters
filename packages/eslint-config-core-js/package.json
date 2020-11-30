@@ -1,0 +1,19 @@
+{
+  "name": "@infinumjs/eslint-config-core-js",
+  "version": "2.0.0",
+  "description": "Infinum's ESLint core rules",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/infinum/js-linters.git"
+  },
+  "author": "Infinum JavaScript Team <hello@infinum.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/infinum/js-linters/issues"
+  },
+  "homepage": "https://github.com/infinum/js-linters#readme",
+  "peerDependencies": {
+    "eslint": "6.x"
+  }
+}

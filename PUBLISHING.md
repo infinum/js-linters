@@ -1,10 +1,8 @@
 # Publishing
 
-Before publishing new version of package, go to package folder and update version number in package json.
+Before publishing a new version, bootstrap the packages:
+`lerna bootstrap`
 
-If your package should be a beta version, run:
-`npm publish --tag beta`
-
-If not, run:
-`npm publish`
+To create a new release and choose the version of the packages that have been updated, run:
+`lerna publish`
 
