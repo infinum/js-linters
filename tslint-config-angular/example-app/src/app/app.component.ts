@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Foo } from './some-code/rxjs';
 
 @Component({
   selector: 'app-root',
@@ -11,5 +12,7 @@ export class AppComponent {
     console.log(numItemsInLocalStorage);
 
     const divs = document.querySelector('div');
+
+    const foo = new Foo();
   }
 }
