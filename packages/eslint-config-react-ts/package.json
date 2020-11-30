@@ -14,11 +14,8 @@
   },
   "homepage": "https://github.com/infinum/js-linters#readme",
   "dependencies": {
-    "@infinumjs/eslint-config-ts": "~2.0.0",
+    "@infinumjs/eslint-config-core-ts": "~2.0.0",
     "@infinumjs/eslint-config-react-js": "~2.0.0"
-  },
-  "devDependencies": {
-    "eslint": "6.x"
   },
   "peerDependencies": {
     "eslint": "6.x"

@@ -4,9 +4,9 @@ This package provides Infinum's ESLint React TypeScript [shareable config](https
 
 ## Usage
 
-1. Install with `npm install --save-dev eslint @infinumjs/eslint-config-react`.
+1. Install with `npm install --save-dev eslint @infinumjs/eslint-config-react-ts`.
 
-2. Add `"extends": "@infinumjs/eslint-config-react"` to your .eslintrc file.
+2. Add `"extends": "@infinumjs/eslint-config-react-ts"` to your .eslintrc file.
 
 ## License
 
