@@ -24,6 +24,5 @@
   "devDependencies": {
     "eslint": ">=6.x",
     "typescript": ">=3.x"
-  },
-  "gitHead": "ebc624a02fc931ba81a3fb01d8c1e3e6f91e2c86"
+  }
 }
