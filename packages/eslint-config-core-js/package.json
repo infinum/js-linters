@@ -14,9 +14,9 @@
   },
   "homepage": "https://github.com/infinum/js-linters#readme",
   "peerDependencies": {
-    "eslint": ">=6.x"
+    "eslint": ">=7"
   },
   "devDependencies": {
-    "eslint": ">=6.x"
+    "eslint": ">=7"
   }
 }

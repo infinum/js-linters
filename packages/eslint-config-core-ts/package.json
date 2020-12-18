@@ -19,11 +19,11 @@
     "@typescript-eslint/parser": "~2.24.0"
   },
   "peerDependencies": {
-    "eslint": ">=6.x",
+    "eslint": ">=7",
     "typescript": ">=3.x"
   },
   "devDependencies": {
-    "eslint": ">=6.x",
+    "eslint": ">=7",
     "typescript": ">=3.x"
   }
 }
