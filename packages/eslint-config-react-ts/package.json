@@ -1,6 +1,6 @@
 {
   "name": "@infinumjs/eslint-config-react-ts",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Infinum's ESLint React TypeScript rules",
   "main": "index.js",
   "repository": {
@@ -15,7 +15,7 @@
   "homepage": "https://github.com/infinum/js-linters#readme",
   "dependencies": {
     "@infinumjs/eslint-config-core-ts": "^2.2.0",
-    "@infinumjs/eslint-config-react-js": "^2.2.0"
+    "@infinumjs/eslint-config-react-js": "^2.3.0"
   },
   "peerDependencies": {
     "eslint": ">=7",
