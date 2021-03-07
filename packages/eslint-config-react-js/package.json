@@ -1,6 +1,6 @@
 {
   "name": "@infinumjs/eslint-config-react-js",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "Infinum's ESLint React rules",
   "main": "index.js",
   "repository": {
