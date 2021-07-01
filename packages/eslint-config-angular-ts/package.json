@@ -1,0 +1,28 @@
+{
+  "name": "@infinumjs/eslint-config-angular-ts",
+  "version": "1.0.0",
+  "description": "Infinum's ESLint Angular TypeScript rules",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/infinum/js-linters.git"
+  },
+  "author": "Infinum JavaScript Team <hello@infinum.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/infinum/js-linters/issues"
+  },
+  "homepage": "https://github.com/infinum/js-linters#readme",
+  "peerDependencies": {
+    "@infinumjs/eslint-config-core-ts": "^2.4.0",
+    "eslint": ">=7",
+    "eslint-plugin-rxjs": ">= 3.3.4",
+    "typescript": ">=3.x"
+  },
+  "devDependencies": {
+    "@infinumjs/eslint-config-core-ts": "^2.4.0",
+    "eslint": ">=7",
+    "eslint-plugin-rxjs": ">= 3.3.4",
+    "typescript": ">=3.x"
+  }
+}
