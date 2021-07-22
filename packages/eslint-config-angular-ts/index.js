@@ -8,33 +8,16 @@ module.exports = {
     es2020: true,
     node: true,
   },
-  extends: ['@infinumjs/eslint-config-core-ts'],
-  plugins: ['rxjs'],
+  extends: ['@infinumjs/eslint-config-core-ts', 'plugin:rxjs/recommended'],
   rules: {
-    // want more rxjs specific rules? https://github.com/cartant/eslint-plugin-rxjs
-    "rxjs/no-async-subscribe": "error",
-    "rxjs/no-ignored-observable": "error",
-    "rxjs/no-ignored-subscription": "error",
-    "rxjs/no-nested-subscribe": "error",
-    "rxjs/no-unbound-methods": "error",
-    "rxjs/throw-error": "error",
-    // from tslint-config-angular, just eslint versions
-    "rxjs/finnish": [
-      "warn",
+    "@typescript-eslint/explicit-member-accessibility": [
+      "error",
       {
-        function: false,
-        methods: false,
-        parameters: true,
-        properties: true,
-        types: {
-          "^EventEmitter$": false
-        },
-        variables: true,
+        "overrides": {
+          "constructors": "off"
+        }
       }
     ],
-    "rxjs/no-exposed-subjects": [
-      "warn",
-      { allowProtected: true }
-    ],        
-  }
+    "@typescript-eslint/prefer-readonly": ["error"]
+  },
 };
