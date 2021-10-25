@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'example-app';
+  title = 'example-app'; // should throw the "missing accessibility modifier" error
 }

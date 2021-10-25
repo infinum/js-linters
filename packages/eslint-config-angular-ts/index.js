@@ -8,7 +8,7 @@ module.exports = {
     es2020: true,
     node: true,
   },
-  extends: ['@infinumjs/eslint-config-core-ts', 'plugin:rxjs/recommended'],
+  extends: ['plugin:rxjs/recommended', '@infinumjs/eslint-config-core-ts'],
   rules: {
     "@typescript-eslint/explicit-member-accessibility": [
       "error",
