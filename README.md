@@ -4,7 +4,7 @@ ESLint and TSLint extensible shareable configs based on Infinum JavaScript Team'
 
 ## ESLint package dependencies
 
-![project-diagram](https://github.com/infinum/js-linters/blob/master/package-diagram.png?raw=true)
+![project-diagram](https://github.com/infinum/js-linters/blob/master/package-diagram.jpg?raw=true)
 
 ## License
 
