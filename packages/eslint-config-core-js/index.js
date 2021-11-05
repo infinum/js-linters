@@ -15,5 +15,6 @@ module.exports = {
   },
   rules: {
     semi: 'error',
+    'no-implicit-coercion': 'error',
   },
 };
