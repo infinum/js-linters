@@ -17,5 +17,6 @@ module.exports = {
 		semi: 'error',
 		'no-implicit-coercion': 'error',
 		'no-nested-ternary': 'error',
+		'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
 	},
 };
