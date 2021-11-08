@@ -1,6 +1,6 @@
 {
   "name": "@infinumjs/eslint-config-core-js",
-  "version": "2.7.0",
+  "version": "2.8.0",
   "description": "Infinum's ESLint core rules",
   "main": "index.js",
   "repository": {
