@@ -18,5 +18,6 @@ module.exports = {
 		'no-implicit-coercion': 'error',
 		'no-nested-ternary': 'error',
 		'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
+		'no-void': 'error',
 	},
 };
