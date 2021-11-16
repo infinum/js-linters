@@ -9,5 +9,5 @@ import { Subject } from 'rxjs';
 export class AppComponent {
 	title = 'example-app'; // should throw the "missing accessibility modifier" error
 
-	public exposedSubject$ = new Subject<void>();
+	public exposedSubject$ = new Subject<void>(); // should throw the no-exposed-subjects error
 }
