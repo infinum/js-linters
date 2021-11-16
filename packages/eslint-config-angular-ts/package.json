@@ -14,15 +14,16 @@
   },
   "homepage": "https://github.com/infinum/js-linters#readme",
   "dependencies": {
-    "@infinumjs/eslint-config-core-ts": "^2.9.0",
-    "eslint-plugin-rxjs": ">=3.3.4"
+    "@infinumjs/eslint-config-core-ts": "^2.9.0"
   },
   "peerDependencies": {
     "eslint": ">=7",
-    "typescript": ">=3.x"
+    "eslint-plugin-rxjs": ">=3",
+    "typescript": ">=3"
   },
   "devDependencies": {
     "eslint": ">=7",
-    "typescript": ">=3.x"
+    "eslint-plugin-rxjs": ">=3",
+    "typescript": ">=3"
   }
 }
