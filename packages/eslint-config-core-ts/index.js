@@ -31,6 +31,16 @@ module.exports = {
           match: true,
         },
       },
+      {
+        selector: ["enum", "enumMember"],
+        format: ["StrictPascalCase"]
+      },
+      {
+        selector: "variable",
+        types: ["boolean"],
+        format: ["StrictPascalCase"],
+        prefix: ["is", "should", "has"]
+      },
     ],
     '@typescript-eslint/array-type': [
       'error',
