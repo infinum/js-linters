@@ -40,6 +40,11 @@ module.exports = {
         format: ["StrictPascalCase"],
         prefix: ["is", "should", "has"]
       },
+      {
+        selector: "typeParameter",
+        format: ["StrictPascalCase"],
+        prefix: ["T"]
+      }
     ],
     '@typescript-eslint/array-type': [
       'error',
