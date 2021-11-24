@@ -41,6 +41,12 @@ module.exports = {
         prefix: ["is", "should", "has"]
       },
       {
+        selector: "variable",
+        types: ["boolean"],
+        modifiers: ["destructured"],
+        format: null
+      },
+      {
         selector: "typeParameter",
         format: ["StrictPascalCase"],
         prefix: ["T"]
