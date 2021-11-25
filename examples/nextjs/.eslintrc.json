@@ -1,0 +1,7 @@
+{
+  "root": true,
+  "extends": "@infinumjs/eslint-config-react-ts",
+  "parserOptions": {
+		"project": ["tsconfig.json"]
+  }
+}
