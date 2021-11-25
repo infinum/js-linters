@@ -2,7 +2,9 @@
   "name": "js-linters",
   "private": true,
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "bootstrap": "lerna bootstrap",
+    "clean": "lerna clean && lerna exec -- rm -rf ./node_modules"
   },
   "devDependencies": {
     "husky": "~7.0.4",
@@ -12,5 +14,11 @@
   },
   "lint-staged": {
     "*.{js,scss,md,ts,component.html}": "prettier --write"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "examples/*"
+    ]
   }
 }
