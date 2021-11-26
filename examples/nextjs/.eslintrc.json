@@ -1,7 +1,15 @@
 {
   "root": true,
   "extends": "@infinumjs/eslint-config-react-ts",
-  "parserOptions": {
-    "project": ["./examples/nextjs/tsconfig.json"]
-  }
+  "overrides": [
+    {
+      "files": [
+        "*.ts",
+        "*.tsx"
+      ],
+      "parserOptions": {
+        "project": ["./tsconfig.json"]
+      }
+    }
+  ]
 }

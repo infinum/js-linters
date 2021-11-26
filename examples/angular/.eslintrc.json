@@ -10,7 +10,7 @@
       ],
       "parserOptions": {
         "project": [
-          "./examples/angular/tsconfig.json"
+          "./tsconfig.json"
         ],
         "createDefaultProgram": true
       },

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ESLint settings regression test 1`] = `
+"/Users/ivicabatinic/Documents/projects/js-linters/examples/nextjs/pages/_app.tsx(1,31): error semi : Missing semicolon.
+/Users/ivicabatinic/Documents/projects/js-linters/examples/nextjs/pages/_app.tsx(2,41): error semi : Missing semicolon.
+/Users/ivicabatinic/Documents/projects/js-linters/examples/nextjs/pages/_app.tsx(4,1): warning @typescript-eslint/explicit-module-boundary-types : Missing return type on function.
+/Users/ivicabatinic/Documents/projects/js-linters/examples/nextjs/pages/_app.tsx(5,38): error semi : Missing semicolon.
+/Users/ivicabatinic/Documents/projects/js-linters/examples/nextjs/pages/_app.tsx(8,21): error semi : Missing semicolon.
+/Users/ivicabatinic/Documents/projects/js-linters/examples/nextjs/pages/api/hello.ts(8,16): warning @typescript-eslint/explicit-module-boundary-types : Missing return type on function.
+/Users/ivicabatinic/Documents/projects/js-linters/examples/nextjs/pages/index.tsx(4,6): error @typescript-eslint/naming-convention : Enum name \`barenumname\` must match one of the following formats: StrictPascalCase
+/Users/ivicabatinic/Documents/projects/js-linters/examples/nextjs/pages/index.tsx(5,3): error @typescript-eslint/naming-convention : Enum Member name \`example\` must match one of the following formats: StrictPascalCase
+/Users/ivicabatinic/Documents/projects/js-linters/examples/nextjs/pages/index.tsx(14,11): error @typescript-eslint/naming-convention : Interface name \`BadInterface\` must match the RegExp: /^I[A-Z]/u
+/Users/ivicabatinic/Documents/projects/js-linters/examples/nextjs/pages/index.tsx(31,9): error @typescript-eslint/naming-convention : Variable name \`valid\` must have one of the following prefixes: is, should, has
+/Users/ivicabatinic/Documents/projects/js-linters/examples/nextjs/pages/index.tsx(32,9): error @typescript-eslint/naming-convention : Variable name \`areAvailable\` must have one of the following prefixes: is, should, has
+/Users/ivicabatinic/Documents/projects/js-linters/examples/nextjs/test/eslint.test.ts(14,26): warning @typescript-eslint/no-explicit-any : Unexpected any. Specify a different type.
+
+12 problems"
+`;
