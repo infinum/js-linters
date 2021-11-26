@@ -1,26 +1,32 @@
 import type { NextPage } from 'next';
 
 // BAD
-enum myexample {
+enum barenumname {
   example = 'example',
 }
 
 // GOOD
-enum MyExample {
+enum GoodEnum {
   Example = 'example',
 }
 
 // BAD
-interface Example {
-  test: boolean;
+interface BadInterface {
+  example: boolean;
 }
 
 // GOOD
-interface IExample {
-  test: boolean;
+interface IGoodInterface {
+  example: boolean;
 }
 
 const Home: NextPage = () => {
+  const badEnum = barenumname.example;
+  const goodEnum = GoodEnum.Example;
+
+  const badInterface: BadInterface = { example: false };
+  const goodInterface: IGoodInterface = { example: true };
+
   // BAD
   const valid = true;
   const areAvailable = false;
@@ -30,7 +36,7 @@ const Home: NextPage = () => {
   const hasSomething = true;
   const shouldUpdate = true;
 
-  console.log(valid, isValid, hasSomething, shouldUpdate, areAvailable);
+  console.log(badEnum, goodEnum, badInterface, goodInterface, valid, isValid, hasSomething, shouldUpdate, areAvailable);
 
 	return (
 		<div>ESLint Validate</div>
