@@ -2,6 +2,5 @@
 
 ## Project setup
 
-1. Install root packages `npm install`
-2. Setup husky `npm run prepare`
-3. Run `npm run bootstrap`
+1. Use version Node >= 16 and npm >= 8
+2. Run `npm run bootstrap`

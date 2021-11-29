@@ -3,7 +3,6 @@ jspm_packages
 
 typings/
 
-package-lock.json
 yarn.lock
 
 lerna-debug.log

@@ -3,12 +3,5 @@
     "packages/*",
     "examples/*"
   ],
-  "version": "2.11.0",
-  "command": {
-    "bootstrap": {
-      "npmClientArgs": [
-        "--no-package-lock"
-      ]
-    }
-  }
+  "version": "2.11.0"
 }

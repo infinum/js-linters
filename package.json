@@ -3,9 +3,9 @@
   "private": true,
   "scripts": {
     "prepare": "husky install",
-    "bootstrap": "lerna bootstrap",
+    "bootstrap": "npm ci",
     "fix": "manypkg fix",
-    "clean": "lerna clean && lerna exec -- rm -rf ./node_modules"
+    "clean": "npm exec --ws -c 'rm -rf ./node_modules' && rm -rf ./node_modules"
   },
   "lint-staged": {
     "*.{js,scss,md,ts,component.html}": "prettier --write"
@@ -22,5 +22,9 @@
       "packages/*",
       "examples/*"
     ]
+  },
+  "engines": {
+    "node": ">=16",
+    "npm": ">=8"
   }
 }
