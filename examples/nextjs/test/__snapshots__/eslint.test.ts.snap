@@ -12,7 +12,7 @@ exports[`ESLint settings regression test 1`] = `
 /Users/ivicabatinic/Documents/projects/js-linters/examples/nextjs/pages/index.tsx(14,11): error @typescript-eslint/naming-convention : Interface name \`BadInterface\` must match the RegExp: /^I[A-Z]/u
 /Users/ivicabatinic/Documents/projects/js-linters/examples/nextjs/pages/index.tsx(31,9): error @typescript-eslint/naming-convention : Variable name \`valid\` must have one of the following prefixes: is, should, has
 /Users/ivicabatinic/Documents/projects/js-linters/examples/nextjs/pages/index.tsx(32,9): error @typescript-eslint/naming-convention : Variable name \`areAvailable\` must have one of the following prefixes: is, should, has
-/Users/ivicabatinic/Documents/projects/js-linters/examples/nextjs/test/eslint.test.ts(14,26): warning @typescript-eslint/no-explicit-any : Unexpected any. Specify a different type.
+/Users/ivicabatinic/Documents/projects/js-linters/examples/nextjs/test/eslint.test.ts(14,25): warning @typescript-eslint/no-explicit-any : Unexpected any. Specify a different type.
 
 12 problems"
 `;
