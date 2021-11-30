@@ -16,15 +16,26 @@ ng add @angular-eslint/schematics
 npm install --save-dev eslint-plugin-rxjs @infinumjs/eslint-config-angular-ts
 ```
 
-3. Open your project's ESLint config file and add Infinum's config to the `extends` array.
+3. Open your project's ESLint config file and add Infinum's config to the `extends` array for TypeScript files.
 
 ```
-"extends": [
-  "plugin:@angular-eslint/recommended",
-  "plugin:@angular-eslint/template/process-inline-templates",
-  …
-  "@infinumjs/eslint-config-angular-ts"
-],
+{
+  ...
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "extends": [
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates",
+        ...
+        "@infinumjs/eslint-config-angular-ts"
+      ],
+      ...
+    },
+    ...
+  ],
+  ...
+}
 ```
 
 ## License
