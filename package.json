@@ -3,9 +3,9 @@
   "private": true,
   "scripts": {
     "prepare": "husky install",
-    "bootstrap": "npm ci",
+    "bootstrap": "lerna bootstrap",
     "fix": "manypkg fix",
-    "clean": "npm exec --ws -c 'rm -rf ./node_modules' && rm -rf ./node_modules"
+    "clean": "lerna exec -- rm -rf ./node_modules && rm -rf ./node_modules"
   },
   "lint-staged": {
     "*.{js,scss,md,ts,component.html}": "prettier --write"
@@ -16,15 +16,5 @@
     "lerna": "~4.0.0",
     "lint-staged": "~11.2.6",
     "prettier": "2.4.1"
-  },
-  "workspaces": {
-    "packages": [
-      "packages/*",
-      "examples/*"
-    ]
-  },
-  "engines": {
-    "node": ">=16",
-    "npm": ">=8"
   }
 }

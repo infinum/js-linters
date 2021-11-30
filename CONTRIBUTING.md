@@ -2,5 +2,5 @@
 
 ## Project setup
 
-1. Use version Node >= 16 and npm >= 8
+1. Install root packages `npm install`
 2. Run `npm run bootstrap`
