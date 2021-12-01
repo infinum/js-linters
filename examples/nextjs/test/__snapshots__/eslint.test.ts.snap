@@ -1,12 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ESLint settings regression test 1`] = `
-"/Users/ivicabatinic/Documents/projects/js-linters/examples/nextjs/pages/_app.tsx(3,1): warning @typescript-eslint/explicit-module-boundary-types : Missing return type on function.
-/Users/ivicabatinic/Documents/projects/js-linters/examples/nextjs/pages/index.tsx(4,6): error @typescript-eslint/naming-convention : Enum name \`barenumname\` must match one of the following formats: StrictPascalCase
+"/Users/ivicabatinic/Documents/projects/js-linters/examples/nextjs/pages/index.tsx(4,6): error @typescript-eslint/naming-convention : Enum name \`barenumname\` must match one of the following formats: StrictPascalCase
 /Users/ivicabatinic/Documents/projects/js-linters/examples/nextjs/pages/index.tsx(5,3): error @typescript-eslint/naming-convention : Enum Member name \`example\` must match one of the following formats: StrictPascalCase
 /Users/ivicabatinic/Documents/projects/js-linters/examples/nextjs/pages/index.tsx(14,11): error @typescript-eslint/naming-convention : Interface name \`BadInterface\` must match the RegExp: /^I[A-Z]/u
 /Users/ivicabatinic/Documents/projects/js-linters/examples/nextjs/pages/index.tsx(31,9): error @typescript-eslint/naming-convention : Variable name \`valid\` must have one of the following prefixes: is, should, has
 /Users/ivicabatinic/Documents/projects/js-linters/examples/nextjs/pages/index.tsx(32,9): error @typescript-eslint/naming-convention : Variable name \`areAvailable\` must have one of the following prefixes: is, should, has
 
-6 problems"
+5 problems"
 `;
