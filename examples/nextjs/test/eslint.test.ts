@@ -9,7 +9,5 @@ it('ESLint settings regression test', async () => {
 	const formatter = await eslint.loadFormatter('visualstudio');
 	const resultText = formatter.format(results);
 
-	console.log(resultText);
-
 	(expect(resultText) as any).toMatchSnapshot();
 });
