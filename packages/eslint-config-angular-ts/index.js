@@ -10,16 +10,7 @@ module.exports = {
 	},
 	extends: ['plugin:rxjs/recommended', '@infinumjs/eslint-config-core-ts'],
 	rules: {
-		'@typescript-eslint/explicit-member-accessibility': [
-			'error',
-			{
-				overrides: {
-					constructors: 'off',
-				},
-			},
-		],
-		'@typescript-eslint/prefer-readonly': ['error'],
-		'rxjs/no-exposed-subjects': ['error'],
+		'prefer-arrow/prefer-arrow-functions': 'off',
 		'rxjs/finnish': [
 			'error',
 			{
@@ -37,5 +28,8 @@ module.exports = {
 				variables: true,
 			},
 		],
+		'rxjs/no-exposed-subjects': ['error'],
+		'rxjs/no-implicit-any-catch': 'off',
+		'rxjs/no-sharereplay': 'off',
 	},
 };

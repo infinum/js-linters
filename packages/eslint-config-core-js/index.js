@@ -14,10 +14,11 @@ module.exports = {
 		sourceType: 'module',
 	},
 	rules: {
-		semi: 'error',
 		'no-implicit-coercion': 'error',
-		'no-nested-ternary': 'error',
 		'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
+		'no-nested-ternary': 'error',
+		'no-underscore-dangle': ['error', { allowAfterThis: true }],
 		'no-void': 'error',
+		semi: 'error',
 	},
 };
