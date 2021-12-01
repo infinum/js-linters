@@ -1,5 +1,5 @@
-## Testing project for ESLint settings
+# Test project for ESLint settings
 
-### Run tests
+## Run tests
 
 Run `npm run test`
