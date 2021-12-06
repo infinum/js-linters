@@ -1,6 +1,6 @@
 {
   "name": "@infinumjs/eslint-config-core-ts",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Infinum's ESLint core TypeScript rules",
   "main": "index.js",
   "repository": {
