@@ -32,6 +32,9 @@ module.exports = {
 			'error',
 			{
 				accessibility: 'explicit',
+				overrides: {
+					constructors: 'no-public',
+				},
 			},
 		],
 		'@typescript-eslint/naming-convention': [
