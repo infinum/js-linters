@@ -6,9 +6,11 @@ module.exports = {
 		es6: true,
 		es2017: true,
 		es2020: true,
+		jasmine: true,
 		node: true,
 	},
-	extends: ['plugin:rxjs/recommended', '@infinumjs/eslint-config-core-ts'],
+	extends: ['plugin:rxjs/recommended', 'plugin:jasmine/recommended', '@infinumjs/eslint-config-core-ts'],
+	plugins: ['jasmine'],
 	rules: {
 		'prefer-arrow/prefer-arrow-functions': 'off',
 		'rxjs/finnish': [
