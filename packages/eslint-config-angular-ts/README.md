@@ -43,4 +43,3 @@ The [MIT License](../LICENSE)
 [Infinum](https://www.infinum.com).
 
 <img src="https://infinum.com/infinum.png" width="264">
-```
