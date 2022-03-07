@@ -33,8 +33,6 @@ This package provides Infinum's ESLint Angular [shareable config](https://eslint
    }
    ```
 
-```
-
 ## License
 
 The [MIT License](../LICENSE)
