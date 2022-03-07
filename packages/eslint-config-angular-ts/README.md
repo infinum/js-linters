@@ -6,36 +6,33 @@ This package provides Infinum's ESLint Angular [shareable config](https://eslint
 
 1. Use the Angular CLI to add add `@angular-eslint/schematics`. If you are migrating from TSLint, follow the [migration guide](https://github.com/angular-eslint/angular-eslint#migrating-an-angular-cli-project-from-codelyzer-and-tslint).
 
-```sh
-ng add @angular-eslint/schematics
-```
+   ```sh
+   ng add @angular-eslint/schematics
+   ```
 
 2. Install the RxJS plugin and Infinum's config.
 
-```sh
-npm install --save-dev eslint-plugin-rxjs @infinumjs/eslint-config-angular-ts
-```
+   ```sh
+   npm install --save-dev eslint-plugin-rxjs @infinumjs/eslint-config-angular-ts
+   ```
 
 3. Open your project's ESLint config file and add Infinum's config to the `extends` array for TypeScript files.
 
-```
-{
-  ...
-  "overrides": [
-    {
-      "files": ["*.ts"],
-      "extends": [
-        "plugin:@angular-eslint/recommended",
-        "plugin:@angular-eslint/template/process-inline-templates",
-        ...
-        "@infinumjs/eslint-config-angular-ts"
-      ],
-      ...
-    },
-    ...
-  ],
-  ...
-}
+   ```json
+   {
+   	"overrides": [
+   		{
+   			"files": ["*.ts"],
+   			"extends": [
+   				"plugin:@angular-eslint/recommended",
+   				"plugin:@angular-eslint/template/process-inline-templates",
+   				"@infinumjs/eslint-config-angular-ts"
+   			]
+   		}
+   	]
+   }
+   ```
+
 ```
 
 ## License
@@ -48,3 +45,4 @@ The [MIT License](../LICENSE)
 [Infinum](https://www.infinum.com).
 
 <img src="https://infinum.com/infinum.png" width="264">
+```

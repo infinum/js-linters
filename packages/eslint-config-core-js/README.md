@@ -4,9 +4,19 @@ This package provides Infinum's ESLint core [shareable config](https://eslint.or
 
 ## Usage
 
-1. Install with `npm install --save-dev eslint @infinumjs/eslint-config-core-js`.
+1. Install the required packages:
 
-2. Add `"extends": "@infinumjs/eslint-config-core-js"` to your .eslintrc file.
+   ```sh
+   npm install --save-dev eslint @infinumjs/eslint-config-core-js
+   ```
+
+2. Extend your ESLint config:
+
+   ```json
+   {
+   	"extends": "@infinumjs/eslint-config-core-js"
+   }
+   ```
 
 ## License
 

@@ -4,9 +4,19 @@ This package provides Infinum's ESLint React [shareable config](https://eslint.o
 
 ## Usage
 
-1. Install with `npm install --save-dev eslint @infinumjs/eslint-config-react-js`.
+1. Install the required packages:
 
-2. Add `"extends": "@infinumjs/eslint-config-react-js"` to your .eslintrc file.
+   ```sh
+   npm install --save-dev eslint eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks @infinumjs/eslint-config-react-js
+   ```
+
+2. Extend your ESLint config:
+
+   ```json
+   {
+   	"extends": "@infinumjs/eslint-config-react-js"
+   }
+   ```
 
 ## License
 

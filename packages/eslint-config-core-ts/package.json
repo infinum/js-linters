@@ -1,29 +1,31 @@
 {
-  "name": "@infinumjs/eslint-config-core-ts",
-  "version": "3.1.0",
-  "description": "Infinum's ESLint core TypeScript rules",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/infinum/js-linters.git"
-  },
-  "author": "Infinum JavaScript Team <hello@infinum.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/infinum/js-linters/issues"
-  },
-  "homepage": "https://github.com/infinum/js-linters#readme",
-  "dependencies": {
-    "@infinumjs/eslint-config-core-js": "^3.0.0",
-    "@typescript-eslint/eslint-plugin": "~5.4.0",
-    "@typescript-eslint/parser": "~5.4.0"
-  },
-  "peerDependencies": {
-    "eslint": ">=7",
-    "typescript": ">=3.x"
-  },
-  "devDependencies": {
-    "eslint": ">=7",
-    "typescript": ">=3.x"
-  }
+	"name": "@infinumjs/eslint-config-core-ts",
+	"version": "3.1.0",
+	"description": "Infinum's ESLint core TypeScript rules",
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/infinum/js-linters.git"
+	},
+	"author": "Infinum JavaScript Team <hello@infinum.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/infinum/js-linters/issues"
+	},
+	"homepage": "https://github.com/infinum/js-linters#readme",
+	"dependencies": {
+		"@infinumjs/eslint-config-core-js": "^3.0.0"
+	},
+	"peerDependencies": {
+		"@typescript-eslint/eslint-plugin": ">=5",
+		"@typescript-eslint/parser": ">=5",
+		"eslint": ">=7",
+		"typescript": ">=3"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": ">=5",
+		"@typescript-eslint/parser": ">=5",
+		"eslint": ">=7",
+		"typescript": ">=3"
+	}
 }
