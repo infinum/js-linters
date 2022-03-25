@@ -26,6 +26,6 @@
     "eslint": ">=7",
     "eslint-plugin-jasmine": ">=4",
     "eslint-plugin-rxjs": ">=3",
-    "typescript": ">=3.x"
+    "typescript": ">=3"
   }
 }
