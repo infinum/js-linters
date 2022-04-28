@@ -14,7 +14,7 @@ This package provides Infinum's ESLint React TypeScript [shareable config](https
 
    ```json
    {
-   	"extends": "@infinumjs/eslint-config-core-ts",
+   	"extends": "@infinumjs/eslint-config-react-ts",
    	"overrides": [
    		{
    			"files": ["*.ts", "*.tsx"],
