@@ -1,6 +1,6 @@
 {
 	"name": "@infinumjs/eslint-config-react-js",
-	"version": "3.2.0",
+	"version": "3.3.0",
 	"description": "Infinum's ESLint React rules",
 	"main": "index.js",
 	"repository": {
@@ -14,7 +14,7 @@
 	},
 	"homepage": "https://github.com/infinum/js-linters#readme",
 	"dependencies": {
-		"@infinumjs/eslint-config-core-js": "^3.2.0"
+		"@infinumjs/eslint-config-core-js": "^3.3.0"
 	},
 	"peerDependencies": {
 		"eslint": ">=7",
