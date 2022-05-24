@@ -7,7 +7,7 @@ This package provides Infinum's ESLint NextJS TypeScript [shareable config](http
 1. Install the required packages:
 
    ```sh
-   npm install --save-dev eslint eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks eslint-config-prettier eslint-config-next @typescript-eslint/eslint-plugin @typescript-eslint/parser @infinumjs/eslint-config-nextjs-ts
+   npm install --save-dev eslint eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks eslint-config-next @typescript-eslint/eslint-plugin @typescript-eslint/parser @infinumjs/eslint-config-nextjs-ts
    ```
 
 2. Extend your ESLint config:

@@ -17,14 +17,14 @@
     "@infinumjs/eslint-config-react-ts": "^3.2.0"
   },
   "peerDependencies": {
-    "eslint": ">=7",
-    "typescript": ">=3"
+    "eslint": ">=7.23.0",
+    "typescript": ">=3.3.1"
   },
   "devDependencies": {
-    "eslint": ">=7",
-    "typescript": ">=3",
+    "eslint": ">=7.23.0",
+    "typescript": ">=3.3.1",
     "eslint-config-prettier": ">=8.5.0",
-    "@next/eslint-plugin-next": ">=12.1.5",
+    "eslint-config-next": "12.1.6",
     "prettier": ">=2.6.2"
   }
 }

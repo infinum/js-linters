@@ -1,3 +1,3 @@
 module.exports = {
-    extends: ['plugin:@next/next/recommended', 'prettier', '@infinumjs/eslint-config-react-ts'],
+    extends: ['plugin:@next/next/recommended', '@infinumjs/eslint-config-react-ts'],
 };
