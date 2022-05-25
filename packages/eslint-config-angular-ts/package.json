@@ -17,13 +17,13 @@
 		"@infinumjs/eslint-config-core-ts": "^3.3.0"
 	},
 	"peerDependencies": {
-		"eslint": ">=7",
+		"eslint": ">=8.14",
 		"eslint-plugin-jasmine": ">=4",
 		"eslint-plugin-rxjs": ">=3",
 		"typescript": ">=3"
 	},
 	"devDependencies": {
-		"eslint": ">=7",
+		"eslint": ">=8.14",
 		"eslint-plugin-jasmine": ">=4",
 		"eslint-plugin-rxjs": ">=3",
 		"typescript": ">=3"
