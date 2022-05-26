@@ -12,7 +12,7 @@
 	},
 	"dependencies": {
 		"@manypkg/cli": "^0.19.1",
-		"husky": "~7.0.4",
+		"husky": "^8.0.1",
 		"lerna": "~5.0.0",
 		"lint-staged": "~11.2.6",
 		"prettier": "2.6.2"
