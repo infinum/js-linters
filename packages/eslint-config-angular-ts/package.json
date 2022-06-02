@@ -1,6 +1,6 @@
 {
 	"name": "@infinumjs/eslint-config-angular-ts",
-	"version": "3.3.0",
+	"version": "3.3.1",
 	"description": "Infinum's ESLint Angular TypeScript rules",
 	"main": "index.js",
 	"repository": {
@@ -14,7 +14,7 @@
 	},
 	"homepage": "https://github.com/infinum/js-linters#readme",
 	"dependencies": {
-		"@infinumjs/eslint-config-core-ts": "^3.3.0"
+		"@infinumjs/eslint-config-core-ts": "^3.3.1"
 	},
 	"peerDependencies": {
 		"eslint": ">=8.14",
