@@ -30,7 +30,6 @@
 		"@swc-node/register": "^1.5.1",
 		"@typescript-eslint/utils": "^5.27.0",
 		"eslint": ">=8",
-		"eslint-config-rule-tester": "^0.2.0",
 		"typescript": ">=3.x",
 		"uvu": "^0.5.3",
 		"watchlist": "^0.3.1"
