@@ -8,7 +8,7 @@
 		"url": "git+https://github.com/infinum/js-linters.git"
 	},
 	"scripts": {
-		"test": "uvu -r @swc-node/register src/__tests__",
+		"test": "uvu -r @swc-node/register __tests__",
 		"test:watch": "watchlist src -- npm run test"
 	},
 	"author": "Infinum JavaScript Team <hello@infinum.com>",
