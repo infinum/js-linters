@@ -1,6 +1,6 @@
 {
   "name": "@infinumjs/eslint-config-core-js",
-  "version": "3.2.0",
+  "version": "3.3.1",
   "description": "Infinum's ESLint core rules",
   "main": "index.js",
   "repository": {
@@ -14,9 +14,9 @@
   },
   "homepage": "https://github.com/infinum/js-linters#readme",
   "peerDependencies": {
-    "eslint": ">=7"
+    "eslint": ">=8.14"
   },
   "devDependencies": {
-    "eslint": ">=7"
+    "eslint": ">=8.14"
   }
 }
