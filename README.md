@@ -10,6 +10,7 @@ graph TD;
     eslint-config-react-js-->eslint-config-core-js;
     eslint-config-react-ts-->eslint-config-react-js;
     eslint-config-react-ts-->eslint-config-core-ts;
+    eslint-config-nextjs-ts-->eslint-config-react-ts;
     eslint-config-angular-ts-->eslint-config-core-ts;
 ```
 
