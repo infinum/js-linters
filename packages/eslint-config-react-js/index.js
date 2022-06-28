@@ -22,6 +22,48 @@ module.exports = {
 		'react-hooks/exhaustive-deps': 'error',
 		'no-param-reassign': 'warn',
 		'consistent-return': 'warn',
+		'padding-line-between-statements': [
+			'error',
+			{
+				blankLine: "always",
+				prev: "*",
+				next: [
+					"return",
+					"if",
+					"switch",
+					"for",
+					"while",
+					"try",
+					"throw",
+					"export",
+				],
+			},
+			{
+				blankLine: "always",
+				prev: [
+					"const",
+					"let",
+					"var",
+					"import",
+				],
+				next: "*",
+			},
+			{
+				blankLine: "any",
+				prev: [
+					"const",
+					"let",
+					"var",
+					"import",
+				],
+				next: [
+					"const",
+					"let",
+					"var",
+					"import"
+				],
+			},
+		],
 	},
 	globals: {
 		JSX: true,
