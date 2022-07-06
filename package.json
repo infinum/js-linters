@@ -5,7 +5,8 @@
 		"prepare": "husky install",
 		"bootstrap": "lerna bootstrap",
 		"fix": "manypkg fix",
-		"clean": "lerna clean && lerna exec -- rm -rf ./node_modules"
+		"clean": "lerna clean && lerna exec -- rm -rf ./node_modules",
+		"test": "lerna run test --no-sort"
 	},
 	"lint-staged": {
 		"*.{js,scss,md,ts,component.html}": "prettier --write"
@@ -16,5 +17,8 @@
 		"lerna": "~5.0.0",
 		"lint-staged": "^12.4.2",
 		"prettier": "2.6.2"
+	},
+	"devDependencies": {
+		"eslint": "^8.19.0"
 	}
 }

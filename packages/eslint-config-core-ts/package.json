@@ -7,6 +7,10 @@
 		"type": "git",
 		"url": "git+https://github.com/infinum/js-linters.git"
 	},
+	"scripts": {
+		"test": "uvu -r @swc-node/register __tests__",
+		"test:watch": "watchlist src -- npm run test"
+	},
 	"author": "Infinum JavaScript Team <hello@infinum.com>",
 	"license": "MIT",
 	"bugs": {
@@ -23,9 +27,13 @@
 		"typescript": ">=3"
 	},
 	"devDependencies": {
+		"@swc-node/register": "^1.5.1",
 		"@typescript-eslint/eslint-plugin": ">=5",
 		"@typescript-eslint/parser": ">=5",
 		"eslint": ">=8.14",
-		"typescript": ">=3"
+		"test-utils": "*",
+		"typescript": ">=3",
+		"uvu": "^0.5.6",
+		"watchlist": "^0.3.1"
 	}
 }

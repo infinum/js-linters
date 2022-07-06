@@ -1,0 +1,13 @@
+{
+	"name": "@infinumjs/test-utils",
+	"version": "1.0.0",
+	"private": "true",
+	"main": "index.ts",
+	"author": "Infinum JavaScript Team <hello@infinum.com>",
+	"license": "MIT",
+	"devDependencies": {
+		"@typescript-eslint/utils": "^5.30.5",
+		"uvu": "^0.5.6",
+		"typescript": ">=3.x"
+	}
+}
