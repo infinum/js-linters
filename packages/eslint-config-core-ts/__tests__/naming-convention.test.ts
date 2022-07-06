@@ -1,5 +1,5 @@
 import { test } from 'uvu';
-import { getTester } from 'test-utils';
+import { getTester } from '@infinumjs/test-utils';
 
 import eslintConfig from '../index';
 
