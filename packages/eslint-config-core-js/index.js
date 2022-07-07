@@ -16,7 +16,8 @@ module.exports = {
 	rules: {
 		'no-constant-binary-expression': 'error',
 		'no-implicit-coercion': 'error',
-		'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
+		'no-mixed-spaces-and-tabs': 'error',
+		// 'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
 		'no-nested-ternary': 'error',
 		'no-underscore-dangle': ['error', { allowAfterThis: true }],
 		'no-void': 'error',
