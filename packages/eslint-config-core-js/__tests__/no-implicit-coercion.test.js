@@ -9,7 +9,7 @@ const tester = getTester({
 	rule: 'no-implicit-coercion',
 });
 
-test('Disallow shorthand type conversions to boolean', () =>
+test('should disallow shorthand type conversions to boolean', () =>
 	tester.invalid(
 		`var foo = null;
 		var b = !!foo;
@@ -17,7 +17,7 @@ test('Disallow shorthand type conversions to boolean', () =>
 		['use `Boolean(foo)` instead.']
 	));
 
-test('Disallow shorthand type conversions to boolean using bitwise NOT operator', () =>
+test('should disallow shorthand type conversions to boolean using bitwise NOT operator', () =>
 	tester.invalid(
 		`var foo = null;
 		var b = ~foo.indexOf(".");
@@ -25,7 +25,7 @@ test('Disallow shorthand type conversions to boolean using bitwise NOT operator'
 		['use `foo.indexOf(".") !== -1` instead.']
 	));
 
-test('Disallow shorthand type conversions to number (1)', () =>
+test('should disallow shorthand type conversions to number (1)', () =>
 	tester.invalid(
 		`var foo = null;
 		var n = +foo;
@@ -33,7 +33,7 @@ test('Disallow shorthand type conversions to number (1)', () =>
 		['use `Number(foo)` instead.']
 	));
 
-test('Disallow shorthand type conversions to number (2)', () =>
+test('should disallow shorthand type conversions to number (2)', () =>
 	tester.invalid(
 		`var foo = null;
 		var n = 1 * foo;
@@ -41,7 +41,7 @@ test('Disallow shorthand type conversions to number (2)', () =>
 		['use `Number(foo)` instead.']
 	));
 
-test('Disallow shorthand type conversions to string using concatenation', () =>
+test('should disallow shorthand type conversions to string using concatenation', () =>
 	tester.invalid(
 		`var foo = null;
 		var s = "" + foo;
@@ -49,7 +49,7 @@ test('Disallow shorthand type conversions to string using concatenation', () =>
 		['use `String(foo)` instead.']
 	));
 
-test('Disallow shorthand type conversions to string', () =>
+test('should disallow shorthand type conversions to string', () =>
 	tester.invalid(
 		`var foo = null;
 		foo += "";
