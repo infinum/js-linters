@@ -93,8 +93,26 @@ export const getTester = (options: ITesterOptions) => {
 		});
 	};
 
+	const validWithWarnings = async (code: string, warnings: Array<string>) => {
+		const results = await cli.lintText(code, { filePath: __filename });
+		const errorCount = results.reduce((count, result) => count + result.errorCount, 0);
+
+		assert.is(
+			errorCount,
+			0,
+			`Should have no errors but had ${errorCount}:\n${results.map((result) =>
+				result.messages.map((msg) => msgToText(msg)).join('\n')
+			)}`
+		);
+
+		results.forEach((result) => {
+			compareErrorMessagesToExpected(result.messages, warnings);
+		});
+	};
+
 	return {
 		valid,
+		validWithWarnings,
 		invalid,
 	};
 };
