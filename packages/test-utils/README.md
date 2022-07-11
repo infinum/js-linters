@@ -1,6 +1,8 @@
 # test-utils
 
-Private package exports utilities testing eslint rules.
+Private package that exports utilities for testing eslint rules.
+
+- for each rule added to the config create a `__tests__/rule-name.test.js` file with tests for that rule:
 
 ```js
 import { test } from 'uvu';
