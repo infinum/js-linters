@@ -4,7 +4,7 @@ module.exports = {
 		es2022: true,
 	},
 	extends: ['@infinumjs/eslint-config-core-js', 'plugin:react/recommended', 'plugin:jsx-a11y/recommended'],
-	plugins: ['react-hooks', 'jsx-a11y'],
+	plugins: ['react', 'react-hooks', 'jsx-a11y'],
 	settings: {
 		react: {
 			version: 'detect',
