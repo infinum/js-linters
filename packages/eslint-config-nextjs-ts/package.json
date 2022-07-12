@@ -1,6 +1,6 @@
 {
   "name": "@infinumjs/eslint-config-nextjs-ts",
-  "version": "3.1.1",
+  "version": "3.3.1",
   "description": "Infinum's ESLint NextJS TypeScript rules",
   "main": "index.js",
   "repository": {
