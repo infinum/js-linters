@@ -19,7 +19,12 @@ module.exports = {
 		],
 		'jsx-a11y/anchor-is-valid': 'warn',
 		'react-hooks/rules-of-hooks': 'error',
-		'react-hooks/exhaustive-deps': 'error',
+		'react-hooks/exhaustive-deps': [
+			'error',
+			{
+				additionalHooks: '(useSafeLayoutEffect)',
+			},
+		],
 		'no-param-reassign': 'warn',
 		'consistent-return': 'warn',
 	},
