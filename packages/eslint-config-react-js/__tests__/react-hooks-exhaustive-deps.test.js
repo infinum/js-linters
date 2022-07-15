@@ -1,16 +1,19 @@
-import { test } from 'uvu';
+import { suite } from 'uvu';
 import { getTester } from '@infinumjs/test-utils';
 
 import eslintConfig from '../index';
 
-const tester = getTester({
+const rule = 'react-hooks/exhaustive-deps';
+const { validate } = getTester({
 	filePath: __filename,
 	eslintConfig: eslintConfig,
-	rule: 'react-hooks/exhaustive-deps',
+	rule,
 });
 
+const test = suite(rule);
+
 test(`should disallow selective use of hook dependancies in custom hooks`, () =>
-	tester.invalid(
+	validate(
 		`
 		const useSomething = (bar) => {
 			const [count] = useState(bar);
@@ -26,7 +29,7 @@ test(`should disallow selective use of hook dependancies in custom hooks`, () =>
 	));
 
 test(`should disallow selective use of hook dependancies in component`, () =>
-	tester.invalid(
+	validate(
 		`
 		const MyComponent = ({bar}) => {
 			var countState = useState(bar);

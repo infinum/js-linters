@@ -1,25 +1,27 @@
-import { test } from 'uvu';
+import { suite } from 'uvu';
 import { getTester } from '@infinumjs/test-utils';
 
 import eslintConfig from '../index';
 
-const tester = getTester({
+const rule = 'no-void';
+const { validate } = getTester({
 	filePath: __filename,
 	eslintConfig: eslintConfig,
-	rule: 'no-void',
+	rule,
 });
 
-test('should disallow void operators 1', () =>
-	tester.invalid(`void foo;`, [`Expected 'undefined' and instead saw 'void'.`]));
+const test = suite(rule);
+
+test('should disallow void operators 1', () => validate(`void foo;`, [`Expected 'undefined' and instead saw 'void'.`]));
 
 test('should disallow void operators 2', () =>
-	tester.invalid(`void someFunction();`, [`Expected 'undefined' and instead saw 'void'.`]));
+	validate(`void someFunction();`, [`Expected 'undefined' and instead saw 'void'.`]));
 
 test('should disallow void operators 3', () =>
-	tester.invalid(`var foo = void bar();`, [`Expected 'undefined' and instead saw 'void'.`]));
+	validate(`var foo = void bar();`, [`Expected 'undefined' and instead saw 'void'.`]));
 
 test('should disallow void operators 4', () =>
-	tester.invalid(
+	validate(
 		`function baz() {
 			return void 0;
 		}`,

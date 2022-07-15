@@ -1,16 +1,19 @@
-import { test } from 'uvu';
+import { suite } from 'uvu';
 import { getTester } from '@infinumjs/test-utils';
 
 import eslintConfig from '../index';
 
-const tester = getTester({
+const rule = 'jsx-a11y/anchor-is-valid';
+const { validate } = getTester({
 	filePath: __filename,
 	eslintConfig: eslintConfig,
-	rule: 'jsx-a11y/anchor-is-valid',
+	rule,
 });
 
-test(`should disallow the use of anchors element as a button (1)`, () =>
-	tester.validWithWarnings(
+const test = suite(rule);
+
+test(`should allow with warning the use of anchors element as a button (1)`, () =>
+	validate(
 		`
     const MyComponent = ({bar}) => {
       const [count, setCount] = useState(0);
@@ -22,13 +25,14 @@ test(`should disallow the use of anchors element as a button (1)`, () =>
       );
     }
   `,
+		[],
 		[
 			`Anchor used as a button. Anchors are primarily expected to navigate. Use the button element instead. Learn more: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md`,
 		]
 	));
 
-test(`should disallow the use of anchors element as a button (2)`, () =>
-	tester.validWithWarnings(
+test(`should allow with warning the use of anchors element as a button (2)`, () =>
+	validate(
 		`
     const MyComponent = ({bar}) => {
       const [count, setCount] = useState(0);
@@ -42,13 +46,14 @@ test(`should disallow the use of anchors element as a button (2)`, () =>
       );
     }
   `,
+		[],
 		[
 			`Anchor used as a button. Anchors are primarily expected to navigate. Use the button element instead. Learn more: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md`,
 		]
 	));
 
-test(`should disallow the use of anchors element as a button (3)`, () =>
-	tester.invalid(
+test(`should allow with warning the use of anchors element as a button (3)`, () =>
+	validate(
 		`
     const MyComponent = ({bar}) => {
       const [count, setCount] = useState(0);
@@ -62,13 +67,14 @@ test(`should disallow the use of anchors element as a button (3)`, () =>
       );
     }
   `,
+		[],
 		[
 			`Anchor used as a button. Anchors are primarily expected to navigate. Use the button element instead. Learn more: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md`,
 		]
 	));
 
 test(`should allow the use of anchor elements for navigation`, () =>
-	tester.valid(
+	validate(
 		`
     const MyNavComponent = () => {
       return (
@@ -79,7 +85,7 @@ test(`should allow the use of anchor elements for navigation`, () =>
 	));
 
 test(`should allow the use of anchor elements for navigation`, () =>
-	tester.valid(
+	validate(
 		`
     const MyNavComponent = () => {
       return (
@@ -89,8 +95,8 @@ test(`should allow the use of anchor elements for navigation`, () =>
   `
 	));
 
-test(`should disallow the use of invalid href attributes in anchor elements`, () =>
-	tester.validWithWarnings(
+test(`should allow with warning the use of invalid href attributes in anchor elements`, () =>
+	validate(
 		`
     const MyNavComponent = () => {
       return (
@@ -98,6 +104,7 @@ test(`should disallow the use of invalid href attributes in anchor elements`, ()
       );
     }
   `,
+		[],
 		[
 			`The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md`,
 		]

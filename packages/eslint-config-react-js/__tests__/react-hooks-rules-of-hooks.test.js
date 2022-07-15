@@ -1,16 +1,19 @@
-import { test } from 'uvu';
+import { suite } from 'uvu';
 import { getTester } from '@infinumjs/test-utils';
 
 import eslintConfig from '../index';
 
-const tester = getTester({
+const rule = 'react-hooks/rules-of-hooks';
+const { validate } = getTester({
 	filePath: __filename,
 	eslintConfig: eslintConfig,
-	rule: 'react-hooks/rules-of-hooks',
+	rule,
 });
 
+const test = suite(rule);
+
 test(`should allow calling hooks in a custom hook`, () =>
-	tester.valid(`
+	validate(`
 	const useSomething = (bar) => {
 		const [count] = useState(bar);
 			const calculation = useMemo(()=> {
@@ -22,7 +25,7 @@ test(`should allow calling hooks in a custom hook`, () =>
 `));
 
 test(`should allow calling hooks in a component`, () =>
-	tester.valid(
+	validate(
 		`
 		const MyComponent = ({bar}) => {
 			const [count] = useState(bar);
@@ -33,12 +36,11 @@ test(`should allow calling hooks in a component`, () =>
 
 			return (<div>{calculation}</div>);
 		}
-		`,
-		[`React Hook useMemo has a missing dependency: 'count'. Either include it or remove the dependency array.`]
+		`
 	));
 
 test(`should allow calling custom hooks from a component`, () =>
-	tester.valid(
+	validate(
 		`
 		const useSomething = (bar) => {
 			const [count] = useState(bar);
@@ -54,12 +56,11 @@ test(`should allow calling custom hooks from a component`, () =>
 
 			return (<div>{calculation}</div>);
 		}
-		`,
-		[`React Hook useMemo has a missing dependency: 'count'. Either include it or remove the dependency array.`]
+		`
 	));
 
 test(`should disallow calling hooks conditionally`, () =>
-	tester.invalid(
+	validate(
 		`
 		const useSomething = (bar) => {
 			if(bar) {
@@ -80,7 +81,7 @@ test(`should disallow calling hooks conditionally`, () =>
 	));
 
 test(`should disallow calling hooks in a loop`, () =>
-	tester.invalid(
+	validate(
 		`
 		const useSomething = (bar) => {
 			const [count] = useState(bar);
@@ -101,7 +102,7 @@ test(`should disallow calling hooks in a loop`, () =>
 	));
 
 test(`should disallow calling hooks in a nested function`, () =>
-	tester.invalid(
+	validate(
 		`
 		const notAHookFunction = (count) => {
 			const calculation = useMemo(()=> {
@@ -124,7 +125,7 @@ test(`should disallow calling hooks in a nested function`, () =>
 	));
 
 test(`should disallow calling hooks in a function from a component`, () =>
-	tester.invalid(
+	validate(
 		`
 		const notAHookFunction = (count) => {
 			const calculation = useMemo(()=> {

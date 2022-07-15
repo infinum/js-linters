@@ -1,16 +1,19 @@
-import { test } from 'uvu';
+import { suite } from 'uvu';
 import { getTester } from '@infinumjs/test-utils';
 
 import eslintConfig from '../index';
 
-const tester = getTester({
+const rule = 'react/prop-types';
+const { validate } = getTester({
 	filePath: __filename,
 	eslintConfig: eslintConfig,
-	rule: 'react/prop-types',
+	rule,
 });
 
+const test = suite(rule);
+
 test(`should allow React component definition with full props validation`, () =>
-	tester.valid(
+	validate(
 		`
 		const MyComponent = ({name, value}) =>  {
       const [count, setCount] = useState(value);
@@ -35,7 +38,7 @@ test(`should allow React component definition with full props validation`, () =>
 	));
 
 test(`should allow React component definition without any props validation`, () =>
-	tester.valid(
+	validate(
 		`
 		const MyComponent = ({name, value}) =>  {
       const [count, setCount] = useState(value);
@@ -55,7 +58,7 @@ test(`should allow React component definition without any props validation`, () 
 	));
 
 test(`should disallow partial props validation in a React component definition`, () =>
-	tester.invalid(
+	validate(
 		`
 		const MyComponent = ({name, value}) =>  {
       const [count, setCount] = useState(value);
