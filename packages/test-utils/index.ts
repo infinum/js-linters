@@ -5,7 +5,7 @@ interface ICliOptions {
 	/**
 	 * Rule name that we are testing
 	 */
-	rule: string;
+	rule: string | Array<string>;
 	eslintConfig: TSESLint.ESLint.ESLintOptions['baseConfig'];
 }
 
@@ -13,9 +13,12 @@ const getCli = ({ rule, eslintConfig }: ICliOptions) => {
 	const baseConfig = { ...eslintConfig };
 
 	baseConfig.extends = [];
-	baseConfig.rules = {
-		[rule]: eslintConfig?.rules?.[rule],
-	};
+
+	const ruleNames = Array.isArray(rule) ? rule : [rule];
+	baseConfig.rules = ruleNames.reduce((rulesConfig: Partial<Record<string, TSESLint.Linter.RuleEntry>>, ruleName) => {
+		rulesConfig[ruleName] = eslintConfig?.rules?.[ruleName];
+		return rulesConfig;
+	}, {});
 
 	return new TSESLint.ESLint({
 		baseConfig,
