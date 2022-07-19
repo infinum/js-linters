@@ -14,6 +14,7 @@ module.exports = {
 		sourceType: 'module',
 	},
 	rules: {
+		'max-len': ['warn', { code: 120, ignorePattern: '^import .*' }],
 		'no-constant-binary-expression': 'error',
 		'no-implicit-coercion': 'error',
 		'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
