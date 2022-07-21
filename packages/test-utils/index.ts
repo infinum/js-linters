@@ -1,21 +1,36 @@
 import { TSESLint } from '@typescript-eslint/utils';
 import assert from 'uvu/assert';
 
+type BaseConfig = TSESLint.ESLint.ESLintOptions['baseConfig'];
+
+const getTestRuleDefinitions = (config: BaseConfig, ruleNames: Array<string>) =>
+	ruleNames.reduce((rulesConfig: Partial<Record<string, TSESLint.Linter.RuleEntry>>, ruleName) => {
+		const definition = config?.rules?.[ruleName];
+		if (definition) {
+			rulesConfig[ruleName] = definition;
+		}
+		return rulesConfig;
+	}, {});
+
 interface ICliOptions {
 	/**
-	 * Rule name that we are testing
+	 * Rule name or names that we are testing
 	 */
-	rule: string;
-	eslintConfig: TSESLint.ESLint.ESLintOptions['baseConfig'];
+	rule: string | Array<string>;
+	eslintConfig: BaseConfig;
 }
-
 const getCli = ({ rule, eslintConfig }: ICliOptions) => {
 	const baseConfig = { ...eslintConfig };
 
 	baseConfig.extends = [];
-	baseConfig.rules = {
-		[rule]: eslintConfig?.rules?.[rule],
-	};
+	const ruleNames = Array.isArray(rule) ? rule : [rule];
+	baseConfig.rules = getTestRuleDefinitions(baseConfig, ruleNames);
+
+	baseConfig.overrides = baseConfig.overrides?.map((override) => ({
+		...override,
+		extends: [],
+		rules: getTestRuleDefinitions(override, ruleNames),
+	}));
 
 	return new TSESLint.ESLint({
 		baseConfig,
@@ -60,13 +75,6 @@ const compareErrorMessagesToExpected = (
 	);
 };
 
-interface ITesterOptions extends ICliOptions {
-	/**
-	 * ESLint expects `filePath` to lint `.ts` files so we need to spoof it.
-	 * It should usually be set to `__filename`
-	 */
-	filePath: string;
-}
 enum MessageSeverity {
 	Warning = 1,
 	Error = 2,
@@ -104,12 +112,19 @@ const groupBySeverity = (results: Array<TSESLint.ESLint.LintResult>) =>
 		{ errors: [], warnings: [] }
 	);
 
+interface ITesterOptions extends ICliOptions {
+	/**
+	 * ESLint expects `filePath` to lint `.ts` files so we need to spoof it.
+	 * It should usually be set to `__filename`
+	 */
+	filePath: string;
+}
 export const getTester = (options: ITesterOptions) => {
 	const { filePath, ...cliOptions } = options;
 	const cli = getCli(cliOptions);
 
 	const validate = async (code: string, expectedErrors: Array<string> = [], expectedWarnings: Array<string> = []) => {
-		const results = await cli.lintText(code, { filePath: __filename });
+		const results = await cli.lintText(code, { filePath });
 		const { errors, warnings } = groupBySeverity(results);
 
 		compareErrorMessagesToExpected(errors, expectedErrors);
