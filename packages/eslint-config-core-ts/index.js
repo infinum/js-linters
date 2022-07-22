@@ -14,9 +14,9 @@ module.exports = {
 		{
 			files: ['*.ts', '*.tsx'],
 			extends: ['plugin:@typescript-eslint/eslint-recommended', 'plugin:@typescript-eslint/recommended'],
-
 			parser: '@typescript-eslint/parser',
 			parserOptions: {
+				tsconfigRootDir: __dirname,
 				project: './__tests__/tsconfig.json',
 				ecmaVersion: 2018,
 				sourceType: 'module',
