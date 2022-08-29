@@ -57,24 +57,47 @@ test('should disallow explicit type declarations for variables or parameters ini
 		['Type undefined trivially inferred from a undefined literal, remove type annotation.']
 	));
 
-test('should disallow explicit type declarations for properties initialized to a number, string or boolean.', () =>
+test('should disallow explicit type declarations for properties initialized to a number.', () =>
 	validate(
 		`
 			class Foo {
-				prop: number = 5;
+				propNumber: number = 5;
 			}
 	`,
 		[],
 		['Type number trivially inferred from a number literal, remove type annotation.']
 	));
 
+test('should disallow explicit type declarations for properties initialized to a string.', () =>
+	validate(
+		`
+			class Foo {
+				propString: string = '5';
+			}
+	`,
+		[],
+		['Type string trivially inferred from a string literal, remove type annotation.']
+	));
+
+test('should disallow explicit type declarations for properties initialized to a boolean.', () =>
+	validate(
+		`
+			class Foo {
+				propBoolean: boolean = false;
+			}
+	`,
+		[],
+		['Type boolean trivially inferred from a boolean literal, remove type annotation.']
+	));
+
 test('should disallow explicit type declarations for variables or parameters initialized to a number, string or boolean..', () =>
 	validate(
-		`function fn(a: number = 5, b: boolean = true) {}`,
+		`function fn(a: number = 5, b: boolean = true, c: string = 'sss') {}`,
 		[],
 		[
 			`Type number trivially inferred from a number literal, remove type annotation.`,
 			`Type boolean trivially inferred from a boolean literal, remove type annotation.`,
+			`Type string trivially inferred from a string literal, remove type annotation.`,
 		]
 	));
 
