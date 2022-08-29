@@ -15,10 +15,6 @@ const test = suite(rule);
 test('should allow classes with explicitly defined member accessibility (except on public constructors)', () =>
 	validate(`
 	class Animal {
-		private constructor(public breed, name) {
-			// Parameter property and constructor
-			this.animalName = name;
-		}
 		private animalName: string; // Property
 		public get name(): string {
 			// get accessor
@@ -42,17 +38,6 @@ test('should allow classes with explicitly defined non-public constructors ', ()
 			this.animalName = name;
 		}
 		private animalName: string; // Property
-		public get name(): string {
-			// get accessor
-			return this.animalName;
-		}
-		public set name(value: string) {
-			// set accessor
-			this.animalName = value;
-		}
-		public walk() {
-			// method
-		}
 	}
 	`));
 
@@ -65,17 +50,6 @@ test('should disallow classes with explicitly defined public constructors', () =
 			this.animalName = name;
 		}
 		private animalName: string; // Property
-		public get name(): string {
-			// get accessor
-			return this.animalName;
-		}
-		public set name(value: string) {
-			// set accessor
-			this.animalName = value;
-		}
-		public walk() {
-			// method
-		}
 	}
 	`,
 		['Public accessibility modifier on method definition constructor.']
@@ -84,24 +58,21 @@ test('should disallow classes with explicitly defined public constructors', () =
 test('should disallow classes without explicitly defined accessibility on accessors', () =>
 	validate(
 		`
-	class Animal {
-		constructor(public breed, name) {
-			// Parameter property and constructor
-			this.animalName = name;
+		class Animal {
+			constructor(public breed, name) {
+				// Parameter property and constructor
+				this.animalName = name;
+			}
+			private animalName: string; // Property
+			get name(): string {
+				// get accessor
+				return this.animalName;
+			}
+			set name(value: string) {
+				// set accessor
+				this.animalName = value;
+			}
 		}
-		private animalName: string; // Property
-		get name(): string {
-			// get accessor
-			return this.animalName;
-		}
-		set name(value: string) {
-			// set accessor
-			this.animalName = value;
-		}
-		public walk() {
-			// method
-		}
-	}
 	`,
 		[
 			'Missing accessibility modifier on get property accessor name.',
@@ -112,24 +83,13 @@ test('should disallow classes without explicitly defined accessibility on access
 test('should disallow classes without explicitly defined accessibility on properties', () =>
 	validate(
 		`
-	class Animal {
-		constructor(public breed, name) {
-			// Parameter property and constructor
-			this.animalName = name;
+		class Animal {
+			constructor(public breed, name) {
+				// Parameter property and constructor
+				this.animalName = name;
+			}
+			animalName: string; // Property
 		}
-		animalName: string; // Property
-		public get name(): string {
-			// get accessor
-			return this.animalName;
-		}
-		public set name(value: string) {
-			// set accessor
-			this.animalName = value;
-		}
-		public walk() {
-			// method
-		}
-	}
 	`,
 		['Missing accessibility modifier on class property animalName.']
 	));
@@ -138,19 +98,6 @@ test('should disallow classes without explicitly defined accessibility on method
 	validate(
 		`
 	class Animal {
-		constructor(public breed, name) {
-			// Parameter property and constructor
-			this.animalName = name;
-		}
-		private animalName: string; // Property
-		public get name(): string {
-			// get accessor
-			return this.animalName;
-		}
-		public set name(value: string) {
-			// set accessor
-			this.animalName = value;
-		}
 		walk() {
 			// method
 		}
