@@ -33,14 +33,15 @@ const compareSingleErrorMessageToExpected = (actualErrorMsg: TSESLint.ESLint.Lin
 
 const compareErrorMessagesToExpected = (
 	actualErrorMsgs: Array<TSESLint.ESLint.LintMessage>,
-	expectedErrorMsgs: Array<string>
+	expectedErrorMsgs: Array<string>,
+	severity: MessageSeverity = MessageSeverity.Error
 ) => {
 	assert.is(
 		actualErrorMsgs.length,
 		expectedErrorMsgs.length,
-		`Should have ${expectedErrorMsgs.length} error${expectedErrorMsgs.length === 1 ? '' : 's'} but had ${
-			actualErrorMsgs.length
-		}: \n${actualErrorMsgs.map((msg) => msgToText(msg)).join('\n')}`
+		`Should have ${expectedErrorMsgs.length} ${severity === MessageSeverity.Error ? 'error' : 'warning'}${
+			expectedErrorMsgs.length === 1 ? '' : 's'
+		} but had ${actualErrorMsgs.length}: \n\n${actualErrorMsgs.map((msg) => msgToText(msg)).join('\n\n')}`
 	);
 
 	const sortedExpectedErrorMsgs = expectedErrorMsgs.sort();
@@ -66,35 +67,56 @@ interface ITesterOptions extends ICliOptions {
 	 */
 	filePath: string;
 }
+enum MessageSeverity {
+	Warning = 1,
+	Error = 2,
+}
+const groupBySeverity = (results: Array<TSESLint.ESLint.LintResult>) =>
+	results.reduce(
+		(
+			aggregate: {
+				errors: Array<TSESLint.ESLint.LintMessage>;
+				warnings: Array<TSESLint.ESLint.LintMessage>;
+			},
+			result
+		) => {
+			const messages = result.messages.reduce(
+				(
+					agg: { errors: Array<TSESLint.ESLint.LintMessage>; warnings: Array<TSESLint.ESLint.LintMessage> },
+					message: TSESLint.ESLint.LintMessage
+				) => {
+					if (message.severity === MessageSeverity.Warning) {
+						agg.warnings.push(message);
+					}
+					if (message.severity === MessageSeverity.Error) {
+						agg.errors.push(message);
+					}
+					return agg;
+				},
+				{ warnings: [], errors: [] }
+			);
+
+			aggregate.errors.push(...messages.errors);
+			aggregate.warnings.push(...messages.warnings);
+
+			return aggregate;
+		},
+		{ errors: [], warnings: [] }
+	);
 
 export const getTester = (options: ITesterOptions) => {
 	const { filePath, ...cliOptions } = options;
 	const cli = getCli(cliOptions);
 
-	const valid = async (code: string) => {
+	const validate = async (code: string, expectedErrors: Array<string> = [], expectedWarnings: Array<string> = []) => {
 		const results = await cli.lintText(code, { filePath: __filename });
+		const { errors, warnings } = groupBySeverity(results);
 
-		const errorCount = results.reduce((count, result) => count + result.errorCount, 0);
-
-		assert.is(
-			errorCount,
-			0,
-			`Should have no errors but had ${errorCount}:\n${results.map((result) =>
-				result.messages.map((msg) => msgToText(msg)).join('\n')
-			)}`
-		);
-	};
-
-	const invalid = async (code: string, errors: Array<string>) => {
-		const results = await cli.lintText(code, { filePath: __filename });
-
-		results.forEach((result) => {
-			compareErrorMessagesToExpected(result.messages, errors);
-		});
+		compareErrorMessagesToExpected(errors, expectedErrors);
+		compareErrorMessagesToExpected(warnings, expectedWarnings, MessageSeverity.Warning);
 	};
 
 	return {
-		valid,
-		invalid,
+		validate,
 	};
 };

@@ -1,16 +1,17 @@
-import { test } from 'uvu';
+import { suite } from 'uvu';
 import { getTester } from '@infinumjs/test-utils';
 
 import eslintConfig from '../index';
 
-const tester = getTester({
+const rule = 'react-hooks/exhaustive-deps';
+const { validate } = getTester({
 	filePath: __filename,
 	eslintConfig: eslintConfig,
-	rule: 'react-hooks/exhaustive-deps',
+	rule,
 });
 
 test(`should show error when there's missing deps on Chakra UI useSafeLayoutEffect`, () =>
-	tester.invalid(
+	validate(
 		`
 	const Test = (bar) => {
 		const [width, setWidth] = useState(0);
