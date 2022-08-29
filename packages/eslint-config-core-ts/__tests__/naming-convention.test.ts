@@ -1,17 +1,20 @@
-import { test } from 'uvu';
+import { suite } from 'uvu';
 import { getTester } from '@infinumjs/test-utils';
 
 import eslintConfig from '../index';
 
-const tester = getTester({
+const rule = '@typescript-eslint/naming-convention';
+const { validate } = getTester({
 	filePath: __filename,
 	eslintConfig: eslintConfig as any,
-	rule: '@typescript-eslint/naming-convention',
+	rule,
 });
 
-test('should alow PascalCase interface with I prefix', () => tester.valid(`interface ITestInterface {}`));
+const test = suite(rule);
+
+test('should alow PascalCase interface with I prefix', () => validate(`interface ITestInterface {}`));
 
 test('should disallow PascalCase interface without I prefix', () =>
-	tester.invalid(`interface TestInterface {}`, ['Interface name `TestInterface` must match the RegExp: /^I[A-Z]/u']));
+	validate(`interface TestInterface {}`, ['Interface name `TestInterface` must match the RegExp: /^I[A-Z]/u']));
 
 test.run();

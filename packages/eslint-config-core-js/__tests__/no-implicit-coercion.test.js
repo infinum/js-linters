@@ -1,16 +1,19 @@
-import { test } from 'uvu';
+import { suite } from 'uvu';
 import { getTester } from '@infinumjs/test-utils';
 
 import eslintConfig from '../index';
 
-const tester = getTester({
+const rule = 'no-implicit-coercion';
+const { validate } = getTester({
 	filePath: __filename,
 	eslintConfig: eslintConfig,
-	rule: 'no-implicit-coercion',
+	rule,
 });
 
+const test = suite(rule);
+
 test('should disallow shorthand type conversions to boolean', () =>
-	tester.invalid(
+	validate(
 		`var foo = null;
 		var b = !!foo;
 		`,
@@ -18,7 +21,7 @@ test('should disallow shorthand type conversions to boolean', () =>
 	));
 
 test('should disallow shorthand type conversions to boolean using bitwise NOT operator', () =>
-	tester.invalid(
+	validate(
 		`var foo = null;
 		var b = ~foo.indexOf(".");
 		`,
@@ -26,7 +29,7 @@ test('should disallow shorthand type conversions to boolean using bitwise NOT op
 	));
 
 test('should disallow shorthand type conversions to number (1)', () =>
-	tester.invalid(
+	validate(
 		`var foo = null;
 		var n = +foo;
 		`,
@@ -34,7 +37,7 @@ test('should disallow shorthand type conversions to number (1)', () =>
 	));
 
 test('should disallow shorthand type conversions to number (2)', () =>
-	tester.invalid(
+	validate(
 		`var foo = null;
 		var n = 1 * foo;
 		`,
@@ -42,7 +45,7 @@ test('should disallow shorthand type conversions to number (2)', () =>
 	));
 
 test('should disallow shorthand type conversions to string using concatenation', () =>
-	tester.invalid(
+	validate(
 		`var foo = null;
 		var s = "" + foo;
 	`,
@@ -50,7 +53,7 @@ test('should disallow shorthand type conversions to string using concatenation',
 	));
 
 test('should disallow shorthand type conversions to string', () =>
-	tester.invalid(
+	validate(
 		`var foo = null;
 		foo += "";
 		`,

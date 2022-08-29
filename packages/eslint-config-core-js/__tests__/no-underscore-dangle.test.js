@@ -1,47 +1,52 @@
-import { test } from 'uvu';
+import { suite } from 'uvu';
 import { getTester } from '@infinumjs/test-utils';
 
 import eslintConfig from '../index';
 
-const tester = getTester({
+const rule = 'no-underscore-dangle';
+const { validate } = getTester({
 	filePath: __filename,
 	eslintConfig: eslintConfig,
-	rule: 'no-underscore-dangle',
+	rule,
 });
 
+const test = suite(rule);
+
 test('should allow variable names not starting with underscore', () =>
-	tester.valid(`
+	validate(`
 const a = "test";
 const b = 2;
 `));
 
 test('should allow variable names containing underscore', () =>
-	tester.valid(`
+	validate(`
 const a_1 = "test";
 const b_1 = 2;
 `));
 
 test('should allow properties of `this` with names with dangling underscore', () =>
-	tester.valid(`
+	validate(`
   var a = this.foo_;
   this._bar();
 `));
 
 test('should not allow variables starting or ending with underscore', () =>
-	tester.invalid(
+	validate(
 		`
   const a_ = "test";
-  const _b = 2;`,
+  const _b = 2;
+	`,
 		[`Unexpected dangling '_' in '_b'.`, `Unexpected dangling '_' in 'a_'.`]
 	));
 
 test('should not allow variables starting or ending with underscore', () =>
-	tester.invalid(
-		`var a = this.foo_;
-    const a_ = "test";
-    const _b = 2;
-    this._bar();
-`,
+	validate(
+		`
+	var a = this.foo_;
+	const a_ = "test";
+	const _b = 2;
+	this._bar();
+	`,
 		[`Unexpected dangling '_' in '_b'.`, `Unexpected dangling '_' in 'a_'.`]
 	));
 

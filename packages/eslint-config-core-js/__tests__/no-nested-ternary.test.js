@@ -1,21 +1,24 @@
-import { test } from 'uvu';
+import { suite } from 'uvu';
 import { getTester } from '@infinumjs/test-utils';
 
 import eslintConfig from '../index';
 
-const tester = getTester({
+const rule = 'no-nested-ternary';
+const { validate } = getTester({
 	filePath: __filename,
 	eslintConfig: eslintConfig,
-	rule: 'no-nested-ternary',
+	rule,
 });
 
+const test = suite(rule);
+
 test('should not allow nested ternary expressions 1', () =>
-	tester.invalid(`var thing = foo ? bar : baz === qux ? quxx : foobar;`, ['Do not nest ternary expressions.']));
+	validate(`var thing = foo ? bar : baz === qux ? quxx : foobar;`, ['Do not nest ternary expressions.']));
 
 test('should not allow nested ternary expressions 2', () =>
-	tester.invalid(`var thing = foo ? bar : (baz === qux ? quxx : foobar);`, ['Do not nest ternary expressions.']));
+	validate(`var thing = foo ? bar : (baz === qux ? quxx : foobar);`, ['Do not nest ternary expressions.']));
 
 test('should not allow nested ternary expressions 3', () =>
-	tester.invalid(`foo ? baz === qux ? quxx() : foobar() : bar();`, ['Do not nest ternary expressions.']));
+	validate(`foo ? baz === qux ? quxx() : foobar() : bar();`, ['Do not nest ternary expressions.']));
 
 test.run();
