@@ -62,4 +62,21 @@ test(`should show error when there's missing deps on Chakra UI useSafeLayoutEffe
 		]
 	));
 
+test(`should show error when there's missing deps on Chakra UI useUpdateEffect`, () =>
+	validate(
+		`
+			const Test = (bar) => {
+				const [width, setWidth] = useState(0);
+
+				useUpdateEffect(() => {
+					setWidth(width);
+				}, []);
+
+				return <input ref={ref} />;
+			}`,
+		[
+			"React Hook useUpdateEffect has a missing dependency: 'width'. Either include it or remove the dependency array. You can also do a functional update 'setWidth(w => ...)' if you only need 'width' in the 'setWidth' call.",
+		]
+	));
+
 test.run();
