@@ -14,10 +14,11 @@ This package provides Infinum's ESLint NextJS TypeScript [shareable config](http
 
    ```json
    {
-   	"extends": "@infinumjs/eslint-config-nextjs-ts",
+		"extends": "@infinumjs/eslint-config-react-js", // optional
    	"overrides": [
    		{
-   			"files": ["*.ts", "*.tsx"],
+   			"files": ["*.tsx?"],
+   			"extends": "@infinumjs/eslint-config-nextjs-ts",
    			"parserOptions": {
    				"project": ["./tsconfig.json"]
    			}
