@@ -27,11 +27,12 @@
 		"typescript": ">=3"
 	},
 	"devDependencies": {
+		"@infinumjs/test-utils": "*",
 		"@swc-node/register": "^1.5.1",
 		"@typescript-eslint/eslint-plugin": ">=5",
 		"@typescript-eslint/parser": ">=5",
 		"eslint": ">=8.14",
-		"@infinumjs/test-utils": "*",
+		"eslint-plugin-typescript-enum": "^2.1.0",
 		"typescript": ">=3",
 		"uvu": "^0.5.6",
 		"watchlist": "^0.3.1"

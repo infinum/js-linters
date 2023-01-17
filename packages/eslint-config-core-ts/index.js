@@ -12,8 +12,9 @@ module.exports = {
 		'@infinumjs/eslint-config-core-js',
 		'plugin:@typescript-eslint/eslint-recommended',
 		'plugin:@typescript-eslint/recommended',
+		'plugin:typescript-enum/recommended',
 	],
-	plugins: ['@typescript-eslint'],
+	plugins: ['@typescript-eslint', 'typescript-enum'],
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
 		ecmaVersion: 2018,
@@ -51,5 +52,7 @@ module.exports = {
 		'@typescript-eslint/no-inferrable-types': 'warn',
 		'@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
 		'@typescript-eslint/prefer-readonly': 'error',
+		'typescript-enum/no-enum': 'warn',
+		'typescript-enum/no-const-enum': 'warn',
 	},
 };
