@@ -28,7 +28,7 @@ module.exports = {
 		'react-hooks/exhaustive-deps': [
 			'error',
 			{
-				additionalHooks: '(useSafeLayoutEffect)',
+				additionalHooks: '(useSafeLayoutEffect|useUpdateEffect)',
 			},
 		],
 		'no-param-reassign': 'warn',
