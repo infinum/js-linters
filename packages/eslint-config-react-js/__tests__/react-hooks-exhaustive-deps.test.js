@@ -12,7 +12,7 @@ const { validate } = getTester({
 
 const test = suite(rule);
 
-test(`should disallow selective use of hook dependancies in custom hooks`, () =>
+test(`should disallow selective use of hook dependencies in custom hooks`, () =>
 	validate(
 		`
 		const useSomething = (bar) => {
@@ -28,7 +28,7 @@ test(`should disallow selective use of hook dependancies in custom hooks`, () =>
 		[`React Hook useMemo has a missing dependency: 'count'. Either include it or remove the dependency array.`]
 	));
 
-test(`should disallow selective use of hook dependancies in component`, () =>
+test(`should disallow selective use of hook dependencies in component`, () =>
 	validate(
 		`
 		const MyComponent = ({bar}) => {
