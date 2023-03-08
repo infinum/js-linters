@@ -45,4 +45,38 @@ test(`should disallow selective use of hook dependancies in component`, () =>
 		[`React Hook useMemo has a missing dependency: 'count'. Either include it or remove the dependency array.`]
 	));
 
+test(`should show error when there's missing deps on Chakra UI useSafeLayoutEffect`, () =>
+	validate(
+		`
+			const Test = (bar) => {
+				const [width, setWidth] = useState(0);
+
+				useSafeLayoutEffect(() => {
+					setWidth(width);
+				}, []);
+
+				return <input ref={ref} />;
+			}`,
+		[
+			"React Hook useSafeLayoutEffect has a missing dependency: 'width'. Either include it or remove the dependency array. You can also do a functional update 'setWidth(w => ...)' if you only need 'width' in the 'setWidth' call.",
+		]
+	));
+
+test(`should show error when there's missing deps on Chakra UI useUpdateEffect`, () =>
+	validate(
+		`
+			const Test = (bar) => {
+				const [width, setWidth] = useState(0);
+
+				useUpdateEffect(() => {
+					setWidth(width);
+				}, []);
+
+				return <input ref={ref} />;
+			}`,
+		[
+			"React Hook useUpdateEffect has a missing dependency: 'width'. Either include it or remove the dependency array. You can also do a functional update 'setWidth(w => ...)' if you only need 'width' in the 'setWidth' call.",
+		]
+	));
+
 test.run();
