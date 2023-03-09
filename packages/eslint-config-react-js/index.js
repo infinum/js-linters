@@ -16,6 +16,10 @@ module.exports = {
 		},
 	},
 	rules: {
+		'react/self-closing-comp': ["warn", {
+			"component": true,
+			"html": true
+		}],
 		'react/react-in-jsx-scope': 'off',
 		'react/prop-types': [
 			'error',
