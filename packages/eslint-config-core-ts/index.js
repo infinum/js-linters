@@ -66,9 +66,8 @@ module.exports = {
 				format: null,
 			},
 			{
-				selector: 'typeParameter',
+				selector: 'typeLike',
 				format: ['StrictPascalCase'],
-				prefix: ['T'],
 			},
 		],
 		'@typescript-eslint/no-inferrable-types': 'warn',
