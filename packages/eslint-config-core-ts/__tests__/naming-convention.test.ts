@@ -102,7 +102,7 @@ test('should disallow destructed renamed boolean variable naming without is, sho
 	]));
 
 /**
- * typeLike: Class
+ * typeLike
  */
 test('should allow PascalCase class naming', () => validate(`class TestClass {}`));
 
@@ -111,17 +111,11 @@ test('should disallow non-PascalCase class naming', () =>
 
 test('should allow PascalCase typeParameter naming', () => validate(`type TestType<T> = T;`));
 
-/**
- * typeLike: Type Parameter
- */
 test('should disallow non-PascalCase typeParameter naming', () =>
 	validate(`type TestType<t> = t;`, [
 		'Type Parameter name `t` must match one of the following formats: StrictPascalCase',
 	]));
 
-/**
- * typeLike: Type Alias
- */
 test('should allow PascalCase typeAlias naming', () => validate(`type TestType = string;`));
 
 test('should disallow non-PascalCase typeAlias naming', () =>
