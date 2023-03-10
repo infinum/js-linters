@@ -14,6 +14,7 @@ module.exports = {
 		sourceType: 'module',
 	},
 	rules: {
+		'no-constant-binary-expression': 'error',
 		'no-implicit-coercion': 'error',
 		'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
 		'no-nested-ternary': 'error',

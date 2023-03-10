@@ -4,9 +4,28 @@ This package provides Infinum's ESLint core TypeScript [shareable config](https:
 
 ## Usage
 
-1. Install with `npm install --save-dev eslint @infinumjs/eslint-config-core-ts`.
+1. Install the required packages:
 
-2. Add `"extends": "@infinumjs/eslint-config-core-ts"` to your .eslintrc file.
+   ```sh
+   npm install --save-dev eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser @infinumjs/eslint-config-core-ts
+   ```
+
+2. Extend your ESLint config:
+
+   ```json
+   {
+   	"extends": "@infinumjs/eslint-config-core-ts",
+   	"overrides": [
+   		{
+   			"files": ["*.ts"],
+   			"parserOptions": {
+   				"project": ["./tsconfig.json"]
+   			}
+   		}
+   	],
+   	"parser": "@typescript-eslint/parser"
+   }
+   ```
 
 ## License
 

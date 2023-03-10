@@ -1,28 +1,39 @@
 {
-  "name": "@infinumjs/eslint-config-react-js",
-  "version": "3.0.0",
-  "description": "Infinum's ESLint React rules",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/infinum/js-linters.git"
-  },
-  "author": "Infinum JavaScript Team <hello@infinum.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/infinum/js-linters/issues"
-  },
-  "homepage": "https://github.com/infinum/js-linters#readme",
-  "dependencies": {
-    "@infinumjs/eslint-config-core-js": "^3.0.0",
-    "eslint-plugin-jsx-a11y": "~6.4.1",
-    "eslint-plugin-react": "~7.21.5",
-    "eslint-plugin-react-hooks": "~4.2.0"
-  },
-  "peerDependencies": {
-    "eslint": ">=7"
-  },
-  "devDependencies": {
-    "eslint": ">=7"
-  }
+	"name": "@infinumjs/eslint-config-react-js",
+	"version": "3.3.1",
+	"description": "Infinum's ESLint React rules",
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/infinum/js-linters.git"
+	},
+	"scripts": {
+		"test": "uvu -r @swc-node/register __tests__",
+		"test:watch": "watchlist src -- npm run test"
+	},
+	"author": "Infinum JavaScript Team <hello@infinum.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/infinum/js-linters/issues"
+	},
+	"homepage": "https://github.com/infinum/js-linters#readme",
+	"dependencies": {
+		"@infinumjs/eslint-config-core-js": "^3.3.1"
+	},
+	"peerDependencies": {
+		"eslint": ">=8.14",
+		"eslint-plugin-jsx-a11y": ">=6",
+		"eslint-plugin-react": ">=7",
+		"eslint-plugin-react-hooks": ">=4"
+	},
+	"devDependencies": {
+		"@swc-node/register": "^1.5.1",
+		"eslint": ">=8.14",
+		"eslint-plugin-jsx-a11y": ">=6",
+		"eslint-plugin-react": ">=7",
+		"eslint-plugin-react-hooks": ">=4.3.0",
+		"uvu": "^0.5.6",
+		"watchlist": "^0.3.1",
+		"@infinumjs/test-utils": "*"
+	}
 }

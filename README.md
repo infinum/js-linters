@@ -4,7 +4,15 @@ ESLint and TSLint extensible shareable configs based on Infinum JavaScript Team'
 
 ## ESLint package dependencies
 
-![project-diagram](https://github.com/infinum/js-linters/blob/master/package-diagram.jpg?raw=true)
+```mermaid
+graph TD;
+    eslint-config-core-ts-->eslint-config-core-js;
+    eslint-config-react-js-->eslint-config-core-js;
+    eslint-config-react-ts-->eslint-config-react-js;
+    eslint-config-react-ts-->eslint-config-core-ts;
+    eslint-config-nextjs-ts-->eslint-config-react-ts;
+    eslint-config-angular-ts-->eslint-config-core-ts;
+```
 
 ## License
 
