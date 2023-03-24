@@ -16,10 +16,13 @@ module.exports = {
 		},
 	},
 	rules: {
-		'react/self-closing-comp': ["warn", {
-			"component": true,
-			"html": true
-		}],
+		'react/self-closing-comp': [
+			'warn',
+			{
+				component: true,
+				html: true,
+			},
+		],
 		'react/react-in-jsx-scope': 'off',
 		'react/prop-types': [
 			'error',
@@ -37,47 +40,5 @@ module.exports = {
 		],
 		'no-param-reassign': 'warn',
 		'consistent-return': 'warn',
-		'padding-line-between-statements': [
-			'error',
-			{
-				blankLine: "always",
-				prev: "*",
-				next: [
-					"return",
-					"if",
-					"switch",
-					"for",
-					"while",
-					"try",
-					"throw",
-					"export",
-				],
-			},
-			{
-				blankLine: "always",
-				prev: [
-					"const",
-					"let",
-					"var",
-					"import",
-				],
-				next: "*",
-			},
-			{
-				blankLine: "any",
-				prev: [
-					"const",
-					"let",
-					"var",
-					"import",
-				],
-				next: [
-					"const",
-					"let",
-					"var",
-					"import"
-				],
-			},
-		],
 	},
 };
