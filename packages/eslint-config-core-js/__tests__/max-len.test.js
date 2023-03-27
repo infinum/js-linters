@@ -12,9 +12,9 @@ const { validate } = getTester({
 
 const test = suite(rule);
 
-test('should not warn for long import line', () => validate(`import a from '${'a'.repeat(140)}';`, []));
+test('should not warn for long import line', () => validate(`import a from '${'a'.repeat(120)}';`, []));
 
 test('should warn for long line other than import line', () =>
-	validate(`var a = '${'a'.repeat(140)}';`, ['This line has a length of 151. Maximum allowed is 140.']));
+	validate(`var a = '${'a'.repeat(120)}';`, ['This line has a length of 131. Maximum allowed is 120.']));
 
 test.run();
