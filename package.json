@@ -3,7 +3,7 @@
 	"private": true,
 	"scripts": {
 		"prepare": "husky install",
-		"bootstrap": "lerna bootstrap",
+		"bootstrap": "lerna bootstrap --no-ci",
 		"fix": "manypkg fix",
 		"clean": "lerna clean && lerna exec -- rm -rf ./node_modules",
 		"test": "lerna run test --no-sort"
