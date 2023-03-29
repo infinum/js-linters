@@ -35,7 +35,7 @@ test('should disallow array style for readonly array definitions', () =>
 		`
 	const y: readonly string[] = ['a', 'b'];
 	`,
-		["Array type using 'string[]' is forbidden. Use 'Array<string>' instead."]
+		["Array type using 'readonly string[]' is forbidden. Use 'ReadonlyArray<string>' instead."]
 	));
 
 test.run();
