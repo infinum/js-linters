@@ -14,10 +14,11 @@ This package provides Infinum's ESLint core TypeScript [shareable config](https:
 
    ```json
    {
-   	"extends": "@infinumjs/eslint-config-core-ts",
+   	"extends": "@infinumjs/eslint-config-core-js", // optional
    	"overrides": [
    		{
    			"files": ["*.ts"],
+				"extends": "@infinumjs/eslint-config-core-ts",
    			"parserOptions": {
    				"project": ["./tsconfig.json"]
    			}
