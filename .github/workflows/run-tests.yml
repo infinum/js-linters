@@ -3,10 +3,10 @@ name: Run Tests
 on:
   push:
     branches:
-      - ${GITHUB_BASE_REF}
+      - master
   pull_request:
     branches:
-      - ${GITHUB_BASE_REF}
+      - master
 
 jobs:
   run-core-js-tests:
