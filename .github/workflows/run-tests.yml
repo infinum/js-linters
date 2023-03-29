@@ -3,10 +3,10 @@ name: Run Tests
 on:
   push:
     branches:
-      - ${GITHUB_HEAD_REF}
+      - ${GITHUB_BASE_REF}
   pull_request:
     branches:
-      - ${GITHUB_HEAD_REF}
+      - ${GITHUB_BASE_REF}
 
 jobs:
   run-core-js-tests:
