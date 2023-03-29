@@ -12,7 +12,7 @@ const { validate } = getTester({
 
 const test = suite(rule);
 
-const anchorUsedAsButtonError = `Anchor used as a button. Anchors are primarily expected to navigate. Use the button element instead. Learn more: https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-is-valid.md`;
+const anchorUsedAsButtonError = `Anchor used as a button. Anchors are primarily expected to navigate. Use the button element instead. Learn more: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md`;
 
 test(`should allow with warning the use of anchors element as a button (1)`, () =>
 	validate(
@@ -102,7 +102,7 @@ test(`should allow with warning the use of invalid href attributes in anchor ele
   `,
 		[],
 		[
-			`The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/anchor-is-valid.md`,
+			`The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md`,
 		]
 	));
 
