@@ -1,20 +1,25 @@
 # eslint-plugin-nextjs-ts
 
-This package provides Infinum's ESLint NextJS TypeScript [shareable config](https://eslint.org/docs/developer-guide/shareable-configs.html).
+This package provides Infinum's ESLint NextJS TypeScript [plugin](https://eslint.org/docs/latest/extend/plugins).
 
 ## Usage
+
+This is part of out [eslint-config-nextjs-ts](https://www.npmjs.com/package/@infinumjs/eslint-config-next-ts) package. We recommend using that instead of manually setting up this package.
+
+### Manual setup
 
 1. Install the required packages:
 
    ```sh
-   npm install --save-dev eslint eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks eslint-config-next @typescript-eslint/eslint-plugin @typescript-eslint/parser @infinumjs/eslint-config-nextjs-ts
+   npm install --save-dev eslint @infinumjs/eslint-plugin-nextjs-ts
    ```
 
 2. Extend your ESLint config:
 
    ```json
    {
-   	"extends": "@infinumjs/eslint-config-nextjs-ts",
+   	"extends": "plugin:@infinumjs/nextjs-ts",
+   	"parser": "@typescript-eslint/parser",
    	"overrides": [
    		{
    			"files": ["*.ts", "*.tsx"],
@@ -22,10 +27,13 @@ This package provides Infinum's ESLint NextJS TypeScript [shareable config](http
    				"project": ["./tsconfig.json"]
    			}
    		}
-   	],
-   	"parser": "@typescript-eslint/parser"
+   	]
    }
    ```
+
+## Rules
+
+- `@infinumjs/nextjs-ts/no-hooks-in-pages-folders` - Reports hooks being used in `pages` folders.
 
 ## License
 
