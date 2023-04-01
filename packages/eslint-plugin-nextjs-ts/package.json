@@ -1,0 +1,20 @@
+{
+	"name": "@infinumjs/eslint-plugin-nextjs-ts",
+	"version": "1.0.0",
+	"description": "Infinum's ESLint NextJS TypeScript plugin",
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/infinum/js-linters.git",
+		"directory": "packages/eslint-plugin-nextjs-ts"
+	},
+	"author": "Infinum JavaScript Team <hello@infinum.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/infinum/js-linters/issues"
+	},
+	"homepage": "https://github.com/infinum/js-linters#readme",
+	"devDependencies": {
+		"eslint": "7.24.0"
+	}
+}
