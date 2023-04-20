@@ -14,7 +14,6 @@ module.exports = {
 	},
 	create: function (context) {
 		function createPathResolver(context) {
-			// const { resolve } = require('path');
 			const resolve = require('resolve');
 
 			let _mathPath;
