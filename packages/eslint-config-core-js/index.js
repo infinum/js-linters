@@ -21,5 +21,6 @@ module.exports = {
 		'no-underscore-dangle': ['error', { allowAfterThis: true }],
 		'no-void': 'error',
 		semi: 'error',
+		'max-len': ['error', { code: 120, ignorePattern: '^import .*' }],
 	},
 };
