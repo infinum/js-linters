@@ -21,5 +21,24 @@ module.exports = {
 		'no-underscore-dangle': ['error', { allowAfterThis: true }],
 		'no-void': 'error',
 		semi: 'error',
+		'max-len': ['error', { code: 120, ignorePattern: '^import .*' }],
+		'padding-line-between-statements': [
+			'error',
+			{
+				blankLine: 'always',
+				prev: '*',
+				next: ['return', 'if', 'switch', 'for', 'while', 'try', 'throw', 'export'],
+			},
+			{
+				blankLine: 'always',
+				prev: ['const', 'let', 'var', 'import'],
+				next: '*',
+			},
+			{
+				blankLine: 'any',
+				prev: ['const', 'let', 'var', 'import'],
+				next: ['const', 'let', 'var', 'import'],
+			},
+		],
 	},
 };
