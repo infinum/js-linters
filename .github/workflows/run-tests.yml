@@ -9,7 +9,10 @@ on:
       - master
 
 jobs:
-  run-core-js-tests:
+  run-tests:
+    strategy:
+      matrix:
+        package: [eslint-config-core-js, eslint-config-core-ts, eslint-config-react-js]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Main Repository
@@ -21,33 +24,5 @@ jobs:
       - name: Bootstrap Packages
         run: npm run bootstrap
       - name: Run Tests
-        working-directory: packages/eslint-config-core-js
-        run: npm test
-  run-core-ts-tests:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Main Repository
-        uses: actions/checkout@v3
-      - name: Setup Node
-        uses: actions/setup-node@v3
-      - name: Install Main Dependencies
-        run: npm i
-      - name: Bootstrap Packages
-        run: npm run bootstrap
-      - name: Run Tests
-        working-directory: packages/eslint-config-core-ts
-        run: npm test
-  run-react-js-tests:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Main Repository
-        uses: actions/checkout@v3
-      - name: Setup Node
-        uses: actions/setup-node@v3
-      - name: Install Main Dependencies
-        run: npm i
-      - name: Bootstrap Packages
-        run: npm run bootstrap
-      - name: Run Tests
-        working-directory: packages/eslint-config-react-js
+        working-directory: packages/${{ matrix.package }}
         run: npm test
