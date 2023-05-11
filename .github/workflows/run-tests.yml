@@ -1,0 +1,28 @@
+name: Run Tests
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  run-tests:
+    strategy:
+      matrix:
+        package: [eslint-config-core-js, eslint-config-core-ts, eslint-config-react-js]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Main Repository
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+      - name: Install Main Dependencies
+        run: npm i
+      - name: Bootstrap Packages
+        run: npm run bootstrap
+      - name: Run Tests
+        working-directory: packages/${{ matrix.package }}
+        run: npm test
