@@ -49,6 +49,26 @@ module.exports = {
 					match: true,
 				},
 			},
+			{
+				selector: ['enum', 'enumMember'],
+				format: ['StrictPascalCase'],
+			},
+			{
+				selector: 'variable',
+				types: ['boolean'],
+				format: ['StrictPascalCase'],
+				prefix: ['is', 'should', 'has'],
+			},
+			{
+				selector: 'variable',
+				types: ['boolean'],
+				modifiers: ['destructured'],
+				format: null,
+			},
+			{
+				selector: 'typeLike',
+				format: ['StrictPascalCase'],
+			},
 		],
 		'@typescript-eslint/no-inferrable-types': 'warn',
 		'@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
