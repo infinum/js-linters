@@ -1,6 +1,6 @@
 {
 	"name": "@infinumjs/eslint-config-react-js",
-	"version": "3.3.1",
+	"version": "3.4.0",
 	"description": "Infinum's ESLint React rules",
 	"main": "index.js",
 	"repository": {
@@ -18,7 +18,7 @@
 	},
 	"homepage": "https://github.com/infinum/js-linters#readme",
 	"dependencies": {
-		"@infinumjs/eslint-config-core-js": "^3.3.1"
+		"@infinumjs/eslint-config-core-js": "^3.4.0"
 	},
 	"peerDependencies": {
 		"eslint": ">=8.14",
@@ -27,13 +27,13 @@
 		"eslint-plugin-react-hooks": ">=4"
 	},
 	"devDependencies": {
+		"@infinumjs/test-utils": "*",
 		"@swc-node/register": "^1.5.1",
 		"eslint": ">=8.14",
 		"eslint-plugin-jsx-a11y": ">=6",
 		"eslint-plugin-react": ">=7",
 		"eslint-plugin-react-hooks": ">=4.3.0",
 		"uvu": "^0.5.6",
-		"watchlist": "^0.3.1",
-		"@infinumjs/test-utils": "*"
+		"watchlist": "^0.3.1"
 	}
 }

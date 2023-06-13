@@ -1,6 +1,6 @@
 {
 	"name": "@infinumjs/eslint-config-nextjs-ts",
-	"version": "3.3.1",
+	"version": "3.4.0",
 	"description": "Infinum's ESLint NextJS TypeScript rules",
 	"main": "index.js",
 	"repository": {
@@ -14,7 +14,7 @@
 	},
 	"homepage": "https://github.com/infinum/js-linters#readme",
 	"dependencies": {
-		"@infinumjs/eslint-config-react-ts": "^3.3.1"
+		"@infinumjs/eslint-config-react-ts": "^3.4.0"
 	},
 	"peerDependencies": {
 		"eslint": ">=8.14",
@@ -22,8 +22,8 @@
 	},
 	"devDependencies": {
 		"eslint": ">=8.14",
-		"typescript": ">=3.3.1",
 		"eslint-config-next": "12.1.6",
-		"prettier": ">=2.6.2"
+		"prettier": ">=2.6.2",
+		"typescript": ">=3.3.1"
 	}
 }
