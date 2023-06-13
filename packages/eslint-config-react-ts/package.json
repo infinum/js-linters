@@ -23,6 +23,7 @@
 	},
 	"devDependencies": {
 		"eslint": ">=8.14",
+		"eslint-plugin-typescript-enum": "^2.1.0",
 		"typescript": ">=3"
 	}
 }
