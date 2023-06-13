@@ -5,7 +5,7 @@
 		"prepare": "husky install",
 		"bootstrap": "lerna bootstrap --no-ci",
 		"fix": "manypkg fix",
-		"publish": "lerna publish",
+		"publish": "lerna publish --no-private",
 		"clean": "lerna clean && lerna exec -- rm -rf ./node_modules",
 		"test": "lerna run test --no-sort"
 	},
