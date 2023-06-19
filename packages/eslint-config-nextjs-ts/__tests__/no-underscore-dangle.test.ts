@@ -15,6 +15,7 @@ const test = suite(rule);
 test('should allow using underscores in __NEXT_DATA__', () =>
 	validate(`
 const ssrData = window.__NEXT_DATA__;
+const props = this.props.__NEXT_DATA__.locale;
 `));
 
 test('should not allow wrong usage of __NEXT_DATA__ variations', () =>
