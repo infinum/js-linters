@@ -1,22 +1,89 @@
 {
-	"name": "js-linters",
-	"private": true,
-	"scripts": {
-		"prepare": "husky install",
-		"bootstrap": "lerna bootstrap --no-ci",
-		"fix": "manypkg fix",
-		"publish": "lerna publish --no-private",
-		"clean": "lerna clean && lerna exec -- rm -rf ./node_modules",
-		"test": "lerna run test --no-sort"
+	"name": "@infinum/eslint-plugin",
+	"version": "1.0.0",
+	"description": "Infinum's ESLint Plugin",
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/infinum/js-linters.git",
+		"directory": "packages/eslint-plugin"
 	},
+	"author": "Infinum JavaScript Team <hello@infinum.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/infinum/js-linters/issues"
+	},
+	"scripts": {
+		"fix": "manypkg fix",
+		"prepare": "husky install",
+		"test:watch": "watchlist src src/tests --eager -- npm run test",
+		"test": "NODE_ENV=test uvu -r esbuild-register src/tests"
+	},
+	"homepage": "https://github.com/infinum/js-linters#readme",
 	"lint-staged": {
 		"*.{js,scss,md,ts,component.html}": "prettier --write"
 	},
-	"dependencies": {
+	"peerDependencies": {
+		"@next/eslint-plugin-next": ">=11",
+		"@typescript-eslint/eslint-plugin": ">=5",
+		"@typescript-eslint/parser": ">=5",
+		"eslint": ">=8.14",
+		"eslint-plugin-jasmine": ">=4",
+		"eslint-plugin-jsx-a11y": ">=6",
+		"eslint-plugin-react": ">=7",
+		"eslint-plugin-react-hooks": ">=4",
+		"eslint-plugin-rxjs": ">=3",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"typescript": ">=3.3"
+	},
+	"peerDependenciesMeta": {
+		"@next/eslint-plugin-next": {
+			"optional": true
+		},
+		"@typescript-eslint/eslint-plugin": {
+			"optional": true
+		},
+		"@typescript-eslint/parser": {
+			"optional": true
+		},
+		"eslint-plugin-jasmine": {
+			"optional": true
+		},
+		"eslint-plugin-jsx-a11y": {
+			"optional": true
+		},
+		"eslint-plugin-react-hooks": {
+			"optional": true
+		},
+		"eslint-plugin-react": {
+			"optional": true
+		},
+		"eslint-plugin-rxjs": {
+			"optional": true
+		}
+	},
+	"devDependencies": {
+		"@commitlint/cli": "~17.6.6",
+		"@commitlint/config-conventional": "~17.6.6",
 		"@manypkg/cli": "^0.19.1",
+		"@next/eslint-plugin-next": ">=11",
+		"@typescript-eslint/eslint-plugin": ">=5",
+		"@typescript-eslint/parser": "5.60.1",
+		"@typescript-eslint/utils": "5.60.1",
+		"esbuild": "~0.18.10",
+		"esbuild-register": "~3.4.2",
+		"eslint": "8.14.0",
+		"eslint-plugin-jasmine": ">=4",
+		"eslint-plugin-jsx-a11y": ">=6",
+		"eslint-plugin-react": ">=7",
+		"eslint-plugin-react-hooks": ">=4",
+		"eslint-plugin-rxjs": ">=3",
 		"husky": "^8.0.1",
-		"lerna": "~5.0.0",
 		"lint-staged": "^12.4.2",
-		"prettier": "2.6.2"
+		"prettier": "2.8.8",
+		"typescript": "5.0",
+		"uvu": "^0.5.6",
+		"watchlist": "~0.3.1"
 	}
 }
