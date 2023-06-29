@@ -1,0 +1,59 @@
+# no-hooks-in-pages-folders
+
+Disallow hooks in Next.js pages folders
+
+## Examples
+
+👎 Examples of **incorrect** code for this rule
+
+```tsx
+// pages/index.tsx
+
+import { useQuery } from 'react-query';
+
+export default function Home() {
+	const { data } = useQuery('todos', () => fetch('/api/todos'));
+
+	return (
+		<div>
+			<h1>My Todos</h1>
+			<ul>
+				{data.map((todo) => (
+					<li key={todo.id}>{todo.title}</li>
+				))}
+			</ul>
+		</div>
+	);
+}
+```
+
+👍 Examples of **correct** code for this rule
+
+```tsx
+// components/features/todos.ts
+
+import { useQuery } from 'react-query';
+
+export function TodosSection() {
+	const { data } = useQuery('todos', () => fetch('/api/todos'));
+
+	return (
+		<div>
+			<h1>My Todos</h1>
+			<ul>
+				{data.map((todo) => (
+					<li key={todo.id}>{todo.title}</li>
+				))}
+			</ul>
+		</div>
+	);
+}
+
+// pages/index.tsx
+
+import { TodosSection } from 'components/features/todos';
+
+export default function Home() {
+	return <TodosSection />;
+}
+```
