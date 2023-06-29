@@ -26,11 +26,12 @@
 		"format": "prettier --write \"./**/*.{ts,mts,cts,tsx,js,mjs,cjs,jsx,json,md,css}\" --ignore-path ../../.prettierignore",
 		"prepare": "husky install",
 		"test:watch": "watchlist src src/tests --eager -- npm run test",
-		"test": "NODE_ENV=test uvu -r esbuild-register src/tests"
+		"test": "NODE_ENV=test uvu -r esbuild-register src/tests",
+		"typecheck": "tsc -p tsconfig.json --noEmit"
 	},
 	"homepage": "https://github.com/infinum/js-linters#readme",
 	"lint-staged": {
-		"*.{js,scss,md,ts,component.html}": "prettier --write"
+		"*.{js,scss,md,ts,component.html}": "npm run format"
 	},
 	"peerDependencies": {
 		"@next/eslint-plugin-next": ">=11",
