@@ -1,4 +1,5 @@
 import { getTypescriptTester } from './utils';
+
 const ruleName = '@typescript-eslint/explicit-member-accessibility';
 
 const { test, validate } = getTypescriptTester(ruleName);

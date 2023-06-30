@@ -1,0 +1,10 @@
+import { getTester } from '../../utils';
+import eslintConfig from '../../../src/configs/{{kebabCase name}}';
+
+export const get{{pascalCase name}}Tester = (ruleName: string) => {
+	return getTester({
+		filePath: __filename,
+		eslintConfig,
+		ruleName: ruleName,
+	});
+};

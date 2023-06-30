@@ -2,7 +2,7 @@
 	"name": "@infinum/eslint-plugin",
 	"version": "1.0.0",
 	"description": "Infinum's ESLint Plugin",
-	"main": "index.js",
+	"main": "dist/index.js",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/infinum/js-linters.git",
@@ -13,15 +13,27 @@
 	"bugs": {
 		"url": "https://github.com/infinum/js-linters/issues"
 	},
+	"files": [
+		"dist",
+		"package.json",
+		"README.md",
+		"LICENSE"
+	],
 	"scripts": {
+		"build": "tsc -b tsconfig.build.json",
+		"clean": "tsc -b tsconfig.build.json --clean",
 		"fix": "manypkg fix",
+		"format": "prettier --write \"./**/*.{ts,mts,cts,tsx,js,mjs,cjs,jsx,json,md,css}\" --ignore-path ../../.prettierignore",
+		"gen:config": "plop config",
+		"gen:rule": "plop rule",
 		"prepare": "husky install",
 		"test:watch": "watchlist src src/tests --eager -- npm run test",
-		"test": "NODE_ENV=test uvu -r esbuild-register src/tests"
+		"test": "NODE_ENV=test uvu -r esbuild-register src/tests",
+		"typecheck": "tsc -p tsconfig.json --noEmit"
 	},
 	"homepage": "https://github.com/infinum/js-linters#readme",
 	"lint-staged": {
-		"*.{js,scss,md,ts,component.html}": "prettier --write"
+		"*.{js,scss,md,ts,component.html}": "npm run format"
 	},
 	"peerDependencies": {
 		"@next/eslint-plugin-next": ">=11",
@@ -68,6 +80,7 @@
 		"@commitlint/config-conventional": "~17.6.6",
 		"@manypkg/cli": "^0.19.1",
 		"@next/eslint-plugin-next": ">=11",
+		"@trivago/prettier-plugin-sort-imports": "~4.1.1",
 		"@typescript-eslint/eslint-plugin": ">=5",
 		"@typescript-eslint/parser": "5.60.1",
 		"@typescript-eslint/utils": "5.60.1",
@@ -81,6 +94,7 @@
 		"eslint-plugin-rxjs": ">=3",
 		"husky": "^8.0.1",
 		"lint-staged": "^12.4.2",
+		"plop": "~3.1.2",
 		"prettier": "2.8.8",
 		"typescript": "5.0",
 		"uvu": "^0.5.6",

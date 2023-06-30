@@ -1,5 +1,5 @@
-import { getTester } from '../../utils';
 import eslintConfig from '../../../src/configs/typescript';
+import { getTester } from '../../utils';
 
 export const getTypescriptTester = (ruleName: string) => {
 	return getTester({
