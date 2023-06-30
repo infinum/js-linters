@@ -1,6 +1,6 @@
 import { TSESLint } from '@typescript-eslint/utils';
-import * as assert from 'uvu/assert';
 import { suite } from 'uvu';
+import * as assert from 'uvu/assert';
 
 interface ICliOptions {
 	/**

@@ -1,4 +1,5 @@
 import { getTypescriptTester } from './utils';
+
 const ruleName = '@typescript-eslint/no-unused-vars';
 
 const { test, validate } = getTypescriptTester(ruleName);
