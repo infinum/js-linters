@@ -6,7 +6,6 @@ export default {
 		es2022: true,
 	},
 	extends: ['plugin:react/recommended', 'plugin:react-hooks/recommended', 'plugin:jsx-a11y/recommended'],
-	plugins: ['jsx-a11y'],
 	settings: {
 		react: {
 			version: process.env.NODE_ENV === 'test' ? 'v18.2.0' : 'detect',
