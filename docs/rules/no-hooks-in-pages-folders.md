@@ -8,7 +8,6 @@ Disallow hooks in Next.js pages folders
 
 ```tsx
 // pages/index.tsx
-
 import { useQuery } from 'react-query';
 
 export default function Home() {
@@ -29,9 +28,9 @@ export default function Home() {
 
 👍 Examples of **correct** code for this rule
 
+<!-- prettier-ignore -->
 ```tsx
 // components/features/todos.ts
-
 import { useQuery } from 'react-query';
 
 export function TodosSection() {
@@ -49,8 +48,8 @@ export function TodosSection() {
 	);
 }
 
-// pages/index.tsx
 
+// pages/index.tsx
 import { TodosSection } from 'components/features/todos';
 
 export default function Home() {
