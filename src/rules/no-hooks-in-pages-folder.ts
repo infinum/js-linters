@@ -1,5 +1,5 @@
-import { TSESTree } from '@typescript-eslint/utils';
 import { createRule } from '../utils/createRule';
+import { TSESTree } from '@typescript-eslint/utils';
 
 export default createRule({
 	name: 'no-hooks-in-pages-folders',
@@ -16,7 +16,7 @@ export default createRule({
 	},
 	defaultOptions: [],
 	create: function (context) {
-		const forbiddenFolders = ['/src/pages/', '/pages/'];
+		const forbiddenFolders = ['(/|^)src/pages/', '(/|^)pages/'];
 		const forbiddenFolderRegex = new RegExp(`(${forbiddenFolders.join('|')})`);
 
 		function isReactHook(node: TSESTree.CallExpression) {
@@ -31,28 +31,26 @@ export default createRule({
 			return node.callee.name.startsWith('use');
 		}
 
-		function checkForHooks(node: TSESTree.CallExpression) {
-			const filename = context.getFilename();
-
-			if (!filename.match(forbiddenFolderRegex)) {
-				return;
-			}
-
-			if (isReactHook(node)) {
-				context.report({
-					node,
-					messageId: 'noHooksInPagesFolder',
-					data: {
-						// `as` is safe since `isReactHook` will be true
-						hookName: (node.callee as TSESTree.Identifier).name,
-						filename,
-					},
-				});
-			}
-		}
-
 		return {
-			CallExpression: checkForHooks,
+			CallExpression(node: TSESTree.CallExpression) {
+				const filename = context.getFilename();
+
+				if (!filename.match(forbiddenFolderRegex)) {
+					return;
+				}
+
+				if (isReactHook(node)) {
+					context.report({
+						node,
+						messageId: 'noHooksInPagesFolder',
+						data: {
+							// `as` is safe since `isReactHook` will be true
+							hookName: (node.callee as TSESTree.Identifier).name,
+							filename,
+						},
+					});
+				}
+			},
 		};
 	},
 });

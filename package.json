@@ -27,8 +27,8 @@
 		"gen:config": "plop config",
 		"gen:rule": "plop rule",
 		"prepare": "husky install",
-		"test:watch": "watchlist src src/tests --eager -- npm run test",
-		"test": "NODE_ENV=test uvu -r esbuild-register src/tests",
+		"test:watch": "watchlist src tests --eager -- npm run test",
+		"test": "NODE_ENV=test uvu -r esbuild-register tests",
 		"typecheck": "tsc -p tsconfig.json --noEmit"
 	},
 	"homepage": "https://github.com/infinum/js-linters#readme",
