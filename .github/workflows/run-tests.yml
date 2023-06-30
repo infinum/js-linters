@@ -10,9 +10,6 @@ on:
 
 jobs:
   run-tests:
-    strategy:
-      matrix:
-        package: [eslint-config-core-js, eslint-config-core-ts, eslint-config-react-js]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Main Repository
@@ -21,8 +18,5 @@ jobs:
         uses: actions/setup-node@v3
       - name: Install Main Dependencies
         run: npm i
-      - name: Bootstrap Packages
-        run: npm run bootstrap
       - name: Run Tests
-        working-directory: packages/${{ matrix.package }}
         run: npm test
