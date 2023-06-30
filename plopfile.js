@@ -61,6 +61,11 @@ module.exports = function main(plop) {
 				templateFile: 'plop/rule/rule.hbs',
 			},
 			{
+				type: 'add',
+				path: 'docs/rules/{{kebabCase name}}.md',
+				templateFile: 'plop/rule/docs.hbs',
+			},
+			{
 				type: 'modify',
 				path: 'src/rules/index.ts',
 				transform: async (file, { name }) => {
