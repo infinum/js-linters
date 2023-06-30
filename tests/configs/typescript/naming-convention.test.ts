@@ -1,4 +1,5 @@
 import { getTypescriptTester } from './utils';
+
 const ruleName = '@typescript-eslint/naming-convention';
 
 const { test, validate } = getTypescriptTester(ruleName);

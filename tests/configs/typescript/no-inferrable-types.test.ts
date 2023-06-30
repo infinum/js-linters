@@ -1,4 +1,5 @@
 import { getTypescriptTester } from './utils';
+
 const ruleName = '@typescript-eslint/no-inferrable-types';
 
 const { test, validate } = getTypescriptTester(ruleName);
