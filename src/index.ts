@@ -6,7 +6,7 @@ import react from './configs/react';
 import typescript from './configs/typescript';
 import rules from './rules';
 
-export default {
+export = {
 	rules,
 
 	configs: {
