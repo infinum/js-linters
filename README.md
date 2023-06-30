@@ -2,48 +2,79 @@
 
 This package provides Infinum's ESLint [plugin](https://eslint.org/docs/latest/extend/plugins).
 
-# TODO
+## Installation
+
+```bash
+npm install --save-dev @infinum/eslint-plugin
+```
 
 ## Usage
 
-This is part of out [eslint-config-nextjs-ts](https://www.npmjs.com/package/@infinumjs/eslint-config-next-ts) package. We recommend using that instead of manually setting up this package.
+The basic usage of this plugin is to extend the `plugin:@infinum/core` config in your ESLint configuration file.
 
-### Manual setup
+```json
+{
+	"extends": ["plugin:@infinum/core"]
+}
+```
 
-1. Install the required packages:
+However, we can also extend `.eslintrc` with additional configs. The idea is to have modular configs and that you can choose what rules you want to have on the project. E.g., there is no need to have `TypeScript` rules on a `JavaScript` project. The entire list of configs can be found in [`src/configs/index.ts`](src/configs/index.ts).
 
-   ```sh
-   npm install --save-dev eslint @infinumjs/eslint-plugin-nextjs-ts
-   ```
+> NOTE: some configs require additional plugins to be installed. E.g., `@infinum/react` requires `eslint-plugin-react` and `eslint-plugin-react-hooks` to be installed.
 
-2. Extend your ESLint config:
+### Presets
 
-   ```json
-   {
-   	"extends": "plugin:@infinumjs/nextjs-ts",
-   	"parser": "@typescript-eslint/parser",
-   	"overrides": [
-   		{
-   			"files": ["*.ts", "*.tsx"],
-   			"parserOptions": {
-   				"project": ["./tsconfig.json"]
-   			}
-   		}
-   	]
-   }
-   ```
+<details>
 
-## Rules
+<summary>Angular Project</summary>
 
-- `@infinumjs/nextjs-ts/no-hooks-in-pages-folders` - Reports hooks being used in `pages` folders.
+```bash
+npm install --save-dev eslint-plugin-rxjs eslint-plugin-jasmine @infinum/eslint-plugin
+```
+
+```json
+{
+	"extends": ["plugin:@infinum/core", "plugin:@infinum/typescript", "plugin:@infinum/angular"],
+	"parserOptions": {
+		"project": ["./tsconfig.json"]
+	}
+}
+```
+
+</details>
+
+<details>
+
+<summary>Infinum React Stack Project</summary>
+
+```bash
+npm install --save-dev eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y @infinum/eslint-plugin
+```
+
+```json
+{
+	"extends": [
+		"plugin:@infinum/core",
+		"plugin:@infinum/typescript",
+		"plugin:@infinum/react",
+		"plugin:@infinum/next-js",
+		"plugin:@infinum/chakra-ui"
+	],
+	"parserOptions": {
+		"project": ["./tsconfig.json"]
+	}
+}
+```
+
+</details>
 
 ## License
 
-The [MIT License](../LICENSE)
+The [MIT License](./LICENSE)
 
 ## Credits
 
-@infinumjs/eslint-config-nextjs-ts is maintained and sponsored by
+`js-linters` is maintained and sponsored by
 [Infinum](https://www.infinum.com).
 
 <img src="https://infinum.com/infinum.png" width="264">
