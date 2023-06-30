@@ -28,11 +28,18 @@ module.exports = function main(plop) {
 				type: 'modify',
 				path: 'src/configs/index.ts',
 				transform: async (file, { name }) => {
-					const importStatement = `import ${name} from './${name}';\n`;
+					const camelCaseName = name.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
+					const kebabCaseName = name.replace(/([A-Z])/g, '-$1').toLowerCase();
 
 					const config = await prettier.resolveConfig();
 
-					const newFile = prettier.format([importStatement, file.replace(/(\n\};)/m, `\n${name},$1`)].join(''), config);
+					const newFile = prettier.format(
+						[
+							`import ${camelCaseName} from './${kebabCaseName}';\n`, // import
+							file.replace(/(\n\};)/m, `\n${kebabCaseName},$1`), // extend exported object
+						].join(''),
+						config
+					);
 
 					return newFile;
 				},
@@ -66,13 +73,24 @@ module.exports = function main(plop) {
 				templateFile: 'plop/rule/docs.hbs',
 			},
 			{
+				type: 'add',
+				path: 'tests/rules/{{kebabCase name}}.md',
+				templateFile: 'plop/rule/test.hbs',
+			},
+			{
 				type: 'modify',
 				path: 'src/rules/index.ts',
 				transform: async (file, { name }) => {
+					const camelCaseName = name.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
+					const kebabCaseName = name.replace(/([A-Z])/g, '-$1').toLowerCase();
+
 					const config = await prettier.resolveConfig();
 
 					const newFile = prettier.format(
-						file.replace(/\{(.*)\}/m, `{$1\n${name}: require('./rules/${name}')}`),
+						[
+							`import ${camelCaseName} from './${kebabCaseName}';\n`, // import
+							file.replace(/\{(.*)\}/m, `{$1\n${kebabCaseName}: ${camelCaseName}}`), // extend exported object
+						].join(''),
 						config
 					);
 
