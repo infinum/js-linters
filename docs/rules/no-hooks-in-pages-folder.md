@@ -1,4 +1,4 @@
-# no-hooks-in-pages-folders
+# no-hooks-in-pages-folder
 
 Disallow hooks in Next.js pages folders
 

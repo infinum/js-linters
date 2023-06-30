@@ -2,7 +2,7 @@ import { createRule } from '../utils/createRule';
 import { TSESTree } from '@typescript-eslint/utils';
 
 export default createRule({
-	name: 'no-hooks-in-pages-folders',
+	name: 'no-hooks-in-pages-folder',
 	meta: {
 		type: 'problem',
 		docs: {
