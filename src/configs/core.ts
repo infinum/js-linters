@@ -15,6 +15,7 @@ export default {
 		sourceType: 'module',
 	},
 	rules: {
+		'newline-before-return': 'error',
 		'no-constant-binary-expression': 'error',
 		'no-implicit-coercion': 'error',
 		'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
