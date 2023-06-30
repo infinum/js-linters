@@ -25,6 +25,7 @@
 		"fix": "manypkg fix",
 		"format": "prettier --write \"./**/*.{ts,mts,cts,tsx,js,mjs,cjs,jsx,json,md,css}\" --ignore-path ../../.prettierignore",
 		"gen:config": "plop config",
+		"gen:rule": "plop rule",
 		"prepare": "husky install",
 		"test:watch": "watchlist src src/tests --eager -- npm run test",
 		"test": "NODE_ENV=test uvu -r esbuild-register src/tests",
