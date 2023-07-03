@@ -1,5 +1,5 @@
 ---
-"@infinum/eslint-plugin": major
+'@infinum/eslint-plugin': major
 ---
 
 Convert `js-linters` to `eslint-plugin`.

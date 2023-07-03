@@ -38,7 +38,6 @@
 		"@typescript-eslint/eslint-plugin": ">=5",
 		"@typescript-eslint/parser": ">=5",
 		"eslint": ">=8.14",
-		"eslint-plugin-jasmine": ">=4",
 		"eslint-plugin-jsx-a11y": ">=6",
 		"eslint-plugin-react": ">=7",
 		"eslint-plugin-react-hooks": ">=4",
@@ -55,9 +54,6 @@
 			"optional": true
 		},
 		"@typescript-eslint/parser": {
-			"optional": true
-		},
-		"eslint-plugin-jasmine": {
 			"optional": true
 		},
 		"eslint-plugin-jsx-a11y": {
