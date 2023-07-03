@@ -31,28 +31,32 @@ export default function Home() {
 <!-- prettier-ignore -->
 ```tsx
 // components/features/todos.ts
-import { useQuery } from 'react-query';
-
-export function TodosSection() {
+export function Todos() {
 	const { data } = useQuery('todos', () => fetch('/api/todos'));
+	
+	if (!data) {
+	  return <div>Loading...</div>;
+	}
 
 	return (
-		<div>
-			<h1>My Todos</h1>
 			<ul>
 				{data.map((todo) => (
 					<li key={todo.id}>{todo.title}</li>
 				))}
 			</ul>
-		</div>
 	);
 }
 
-
 // pages/index.tsx
-import { TodosSection } from 'components/features/todos';
+import { Todos } from 'components/features/todos';
 
 export default function Home() {
-	return <TodosSection />;
+	return (
+		<div>
+			<h1>My Todos</h1>
+			
+			<Todos />
+		</div>
+	);
 }
 ```
