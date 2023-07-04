@@ -4,55 +4,22 @@ import { createRule } from '../utils/createRule';
 export default createRule({
 	name: '{{kebabCase name}}',
 	meta: {
-		type: 'problem',
+		type: "suggestion",
 		docs: {
 			description: '{{sentenceCase description}}',
 			recommended: 'error',
 		},
 		schema: [],
 		messages: {
-			noHooksInPagesFolder: "React hook '{{hookName}}' not allowed in {{filename}}",
+			// message ids
+			// https://eslint.org/docs/latest/extend/custom-rules#messageids
 		},
 	},
 	defaultOptions: [],
 	create: function (context) {
-		const forbiddenFolders = ['/src/pages/', '/pages/'];
-		const forbiddenFolderRegex = new RegExp(`(${forbiddenFolders.join('|')})`);
-
-		function isReactHook(node: TSESTree.CallExpression) {
-			if (node.type !== TSESTree.AST_NODE_TYPES.CallExpression) {
-				return false;
-			}
-
-			if (node.callee.type !== TSESTree.AST_NODE_TYPES.Identifier) {
-				return false;
-			}
-
-			return node.callee.name.startsWith('use');
-		}
-
-		function checkForHooks(node: TSESTree.CallExpression) {
-			const filename = context.getFilename();
-
-			if (!filename.match(forbiddenFolderRegex)) {
-				return;
-			}
-
-			if (isReactHook(node)) {
-				context.report({
-					node,
-					messageId: 'noHooksInPagesFolder',
-					data: {
-						// `as` is safe since `isReactHook` will be true
-						hookName: (node.callee as TSESTree.Identifier).name,
-						filename,
-					},
-				});
-			}
-		}
-
 		return {
-			CallExpression: checkForHooks,
+			// callback functions
+			// https://eslint.org/docs/latest/extend/custom-rules
 		};
 	},
 });
