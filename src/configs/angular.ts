@@ -10,7 +10,7 @@ export default {
 		jasmine: true,
 		node: true,
 	},
-	extends: ['plugin:rxjs/recommended', 'plugin:jasmine/recommended'],
+	extends: ['plugin:rxjs/recommended'],
 	rules: {
 		'prefer-arrow/prefer-arrow-functions': 'off',
 		'rxjs/finnish': [
