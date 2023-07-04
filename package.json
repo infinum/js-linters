@@ -34,17 +34,15 @@
 		"*.{js,scss,md,ts,component.html}": "npm run format"
 	},
 	"peerDependencies": {
-		"@next/eslint-plugin-next": ">=11",
-		"@typescript-eslint/eslint-plugin": ">=5",
-		"@typescript-eslint/parser": ">=5",
-		"eslint": ">=8.14",
-		"eslint-plugin-jsx-a11y": ">=6",
-		"eslint-plugin-react": ">=7",
-		"eslint-plugin-react-hooks": ">=4",
-		"eslint-plugin-rxjs": ">=3",
-		"react": "18.2.0",
-		"react-dom": "18.2.0",
-		"typescript": ">=3.3"
+		"@next/eslint-plugin-next": "^11.0.0 || ^12.0.0 || ^13.0.0",
+		"@typescript-eslint/eslint-plugin": "^5.0.0",
+		"@typescript-eslint/parser": "^5.0.0",
+		"eslint": "^8.0.0",
+		"eslint-plugin-jsx-a11y": "^6.0.0",
+		"eslint-plugin-react": "^7.0.0",
+		"eslint-plugin-react-hooks": "^4.0.0",
+		"eslint-plugin-rxjs": "^3.0.0 || ^4.0.0 || ^5.0.0",
+		"typescript": "^3.3.0 || ^4.0.0 || ^5.0.0"
 	},
 	"peerDependenciesMeta": {
 		"@next/eslint-plugin-next": {
@@ -59,13 +57,16 @@
 		"eslint-plugin-jsx-a11y": {
 			"optional": true
 		},
-		"eslint-plugin-react-hooks": {
-			"optional": true
-		},
 		"eslint-plugin-react": {
 			"optional": true
 		},
+		"eslint-plugin-react-hooks": {
+			"optional": true
+		},
 		"eslint-plugin-rxjs": {
+			"optional": true
+		},
+		"typescript": {
 			"optional": true
 		}
 	},
