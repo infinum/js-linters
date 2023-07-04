@@ -1,0 +1,4 @@
+{
+	"root": true,
+	"extends": ["@infinum/core", "@infinum/typescript"]
+}

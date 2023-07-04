@@ -1,22 +1,96 @@
 {
-	"name": "js-linters",
-	"private": true,
+	"name": "@infinum/eslint-plugin",
+	"version": "1.0.0",
+	"description": "Infinum's ESLint Plugin",
+	"main": "dist/index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/infinum/js-linters.git",
+		"directory": "packages/eslint-plugin"
+	},
+	"author": "Infinum JavaScript Team <hello@infinum.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/infinum/js-linters/issues"
+	},
+	"files": [
+		"dist",
+		"package.json",
+		"README.md",
+		"LICENSE"
+	],
 	"scripts": {
-		"prepare": "husky install",
-		"bootstrap": "lerna bootstrap --no-ci",
+		"build": "tsc -b tsconfig.build.json",
+		"clean": "tsc -b tsconfig.build.json --clean",
 		"fix": "manypkg fix",
-		"publish": "lerna publish --no-private",
-		"clean": "lerna clean && lerna exec -- rm -rf ./node_modules",
-		"test": "lerna run test --no-sort"
+		"format": "prettier --write \"./**/*.{ts,mts,cts,tsx,js,mjs,cjs,jsx,json,md,css}\" --ignore-path ../../.prettierignore",
+		"prepare": "husky install",
+		"test:watch": "watchlist src tests --eager -- npm run test",
+		"test": "NODE_ENV=test uvu -r esbuild-register tests",
+		"typecheck": "tsc -p tsconfig.json --noEmit"
 	},
+	"homepage": "https://github.com/infinum/js-linters#readme",
 	"lint-staged": {
-		"*.{js,scss,md,ts,component.html}": "prettier --write"
+		"*.{js,scss,md,ts,component.html}": "npm run format"
 	},
-	"dependencies": {
+	"peerDependencies": {
+		"@next/eslint-plugin-next": "^11.0.0 || ^12.0.0 || ^13.0.0",
+		"@typescript-eslint/eslint-plugin": "^5.0.0",
+		"@typescript-eslint/parser": "^5.0.0",
+		"eslint": "^8.0.0",
+		"eslint-plugin-jsx-a11y": "^6.0.0",
+		"eslint-plugin-react": "^7.0.0",
+		"eslint-plugin-react-hooks": "^4.0.0",
+		"eslint-plugin-rxjs": "^3.0.0 || ^4.0.0 || ^5.0.0",
+		"typescript": "^3.3.0 || ^4.0.0 || ^5.0.0"
+	},
+	"peerDependenciesMeta": {
+		"@next/eslint-plugin-next": {
+			"optional": true
+		},
+		"@typescript-eslint/eslint-plugin": {
+			"optional": true
+		},
+		"@typescript-eslint/parser": {
+			"optional": true
+		},
+		"eslint-plugin-jsx-a11y": {
+			"optional": true
+		},
+		"eslint-plugin-react": {
+			"optional": true
+		},
+		"eslint-plugin-react-hooks": {
+			"optional": true
+		},
+		"eslint-plugin-rxjs": {
+			"optional": true
+		},
+		"typescript": {
+			"optional": true
+		}
+	},
+	"devDependencies": {
+		"@commitlint/cli": "~17.6.6",
+		"@commitlint/config-conventional": "~17.6.6",
 		"@manypkg/cli": "^0.19.1",
+		"@next/eslint-plugin-next": ">=11",
+		"@typescript-eslint/eslint-plugin": ">=5",
+		"@typescript-eslint/parser": "5.60.1",
+		"@typescript-eslint/utils": "5.60.1",
+		"esbuild": "~0.18.10",
+		"esbuild-register": "~3.4.2",
+		"eslint": "8.14.0",
+		"eslint-plugin-jasmine": ">=4",
+		"eslint-plugin-jsx-a11y": ">=6",
+		"eslint-plugin-react": ">=7",
+		"eslint-plugin-react-hooks": ">=4",
+		"eslint-plugin-rxjs": ">=3",
 		"husky": "^8.0.1",
-		"lerna": "~5.0.0",
 		"lint-staged": "^12.4.2",
-		"prettier": "2.6.2"
+		"prettier": "2.8.8",
+		"typescript": "5.0",
+		"uvu": "^0.5.6",
+		"watchlist": "~0.3.1"
 	}
 }
