@@ -1,0 +1,25 @@
+import { TSESTree } from '@typescript-eslint/utils';
+import { createRule } from '../utils/createRule';
+
+export default createRule({
+	name: '{{kebabCase name}}',
+	meta: {
+		type: "suggestion",
+		docs: {
+			description: '{{sentenceCase description}}',
+			recommended: 'error',
+		},
+		schema: [],
+		messages: {
+			// message ids
+			// https://eslint.org/docs/latest/extend/custom-rules#messageids
+		},
+	},
+	defaultOptions: [],
+	create: function (context) {
+		return {
+			// callback functions
+			// https://eslint.org/docs/latest/extend/custom-rules
+		};
+	},
+});

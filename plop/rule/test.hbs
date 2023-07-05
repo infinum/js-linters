@@ -1,0 +1,27 @@
+import rule from '../../src/rules/{{kebabCase name}}';
+import { ESLintUtils } from '@typescript-eslint/utils';
+import { test } from 'uvu';
+
+const ruleTester = new ESLintUtils.RuleTester({
+	parser: '@typescript-eslint/parser',
+});
+
+test('{{kebabCase name}}', () => {
+	ruleTester.run('{{kebabCase name}}', rule, {
+		valid: [
+			{
+				name: 'should ...',
+				code: `...`,
+			},
+		],
+		invalid: [
+			{
+				name: 'should ...',
+				code: `...`,
+				errors: [],
+			},
+		],
+	});
+});
+
+test.run();
