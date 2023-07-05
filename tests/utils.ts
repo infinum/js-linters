@@ -93,7 +93,7 @@ const compareErrorMessagesToExpected = (
 	);
 };
 
-interface ITesterOptions extends ICliOptions {
+export interface ITesterOptions extends ICliOptions {
 	/**
 	 * ESLint expects `filePath` to lint `.ts` files so we need to spoof it.
 	 * It should usually be set to `__filename`
@@ -143,8 +143,13 @@ export const getTester = (options: ITesterOptions) => {
 	const { filePath, ...cliOptions } = options;
 	const cli = getCli(cliOptions);
 
-	const validate = async (code: string, expectedErrors: Array<string> = [], expectedWarnings: Array<string> = []) => {
-		const results = await cli.lintText(code, { filePath: __filename });
+	const validate = async (
+		code: string,
+		expectedErrors: Array<string> = [],
+		expectedWarnings: Array<string> = [],
+		lintOptions: TSESLint.ESLint.LintTextOptions = {}
+	) => {
+		const results = await cli.lintText(code, { filePath: __filename, ...lintOptions });
 		const { errors, warnings } = groupBySeverity(results);
 
 		compareErrorMessagesToExpected(errors, expectedErrors);
