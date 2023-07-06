@@ -9,6 +9,6 @@ export const getNextJsTester = (ruleName: string) => {
 			...reactEslintConfig,
 			...eslintConfig,
 		},
-		ruleName: ruleName,
+		ruleName,
 	});
 };

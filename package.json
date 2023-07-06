@@ -76,6 +76,7 @@
 		"@changesets/cli": "~2.26.2",
 		"@commitlint/cli": "~17.6.6",
 		"@commitlint/config-conventional": "~17.6.6",
+		"@infinum/eslint-plugin": "file:./",
 		"@manypkg/cli": "^0.19.1",
 		"@next/eslint-plugin-next": ">=11",
 		"@trivago/prettier-plugin-sort-imports": "~4.1.1",
