@@ -80,7 +80,7 @@
 		"@manypkg/cli": "^0.19.1",
 		"@next/eslint-plugin-next": ">=11",
 		"@trivago/prettier-plugin-sort-imports": "~4.1.1",
-		"@typescript-eslint/eslint-plugin": ">=5",
+		"@typescript-eslint/eslint-plugin": "^5",
 		"@typescript-eslint/parser": "5.60.1",
 		"@typescript-eslint/utils": "5.60.1",
 		"esbuild": "~0.18.10",
