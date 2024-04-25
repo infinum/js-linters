@@ -1,4 +1,7 @@
 {
 	"root": true,
-	"extends": ["@infinum/core", "@infinum/typescript"]
+	"extends": ["plugin:@infinum/core", "plugin:@infinum/typescript", "plugin:prettier/recommended"],
+	"parserOptions": {
+		"project": "./tsconfig.json"
+	}
 }

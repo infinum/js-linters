@@ -6,16 +6,14 @@
 		"declaration": true,
 		"declarationMap": true,
 		"esModuleInterop": true,
-		"module": "commonjs",
-		"moduleResolution": "node",
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
 		"noImplicitReturns": true,
 		"pretty": true,
 		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true,
 		"target": "es2017",
-		"lib": ["es2017"],
-		"paths": {}
-	},
-	"include": ["**/*.ts"]
+		"lib": ["es2017"]
+	}
 }

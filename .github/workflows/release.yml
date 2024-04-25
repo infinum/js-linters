@@ -12,33 +12,58 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
+      - name: 📥 Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Setup Node.js 18.x
+      - name: 🎰 Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
 
-      # lock files are ignored for some reason we cannot remember
-      # because of that, `install` instead of `ci` is used
-      - name: Install Dependencies
-        run: npm install
+      - name: ❶ Install pNPM
+        uses: pnpm/action-setup@v2
+        with:
+          run_install: false
 
-      - name: Build packages
-        run: npm run build
+      - name: ❷ Setup pNPM store path
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
 
-      - name: Create Release Pull Request or Publish to npm
+      - name: ❸ Setup pNPM cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: 📦 Install dependencies
+        run: pnpm install --frozen-lockfile --prefer-offline --ignore-scripts
+
+      - name: 🧐 Prettier
+        run: pnpm prettier:check
+
+      - name: 🫣 Lint
+        run: pnpm lint
+
+      - name: 🏗️ Build the pacakge
+        run: pnpm build
+
+      - name: 🧪 Run Tests
+        run: pnpm test
+
+      - name: 📢 Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
         with:
-          publish: npm publish
-          commit: "ci: version packages"
+          publish: pnpm publish
+          commit: 'ci: version packages'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Create Git Tag
+      - name: 🚩 Create Git Tag
         id: create_tag
         if: steps.changesets.outputs.published == 'true'
         run: |

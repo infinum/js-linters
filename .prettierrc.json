@@ -9,6 +9,7 @@
 	"singleQuote": true,
 	"semi": true,
 	"trailingComma": "es5",
+	"singleAttributePerLine": true,
 	"overrides": [
 		{
 			"files": "*.component.html",
