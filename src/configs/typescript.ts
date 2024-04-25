@@ -33,7 +33,7 @@ export default {
 			},
 		],
 		'@typescript-eslint/no-inferrable-types': 'warn',
-		'@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+		'@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_', ignoreRestSiblings: true }],
 		'@typescript-eslint/prefer-readonly': 'error',
 	},
 } satisfies TSESLint.Linter.Config;

@@ -1,0 +1,5 @@
+# Workspace configuration is necessary for Github Actions,
+# so that this repository could use it's own config file for linting.
+
+packages:
+  - './'

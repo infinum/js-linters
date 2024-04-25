@@ -3,6 +3,7 @@ import { getReactTester } from './utils';
 const ruleName = 'no-param-reassign';
 
 const { test, validate } = getReactTester(ruleName);
+
 test(`should allow with warning reassigning function parameters 1`, () =>
 	validate(
 		`

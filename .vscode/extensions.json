@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "editorconfig.editorconfig",
+        "dbaeumer.vscode-eslint",
+        "itsmeadarsh.vsc-handlebars-ext",
+        "esbenp.prettier-vscode"
+    ]
+}
