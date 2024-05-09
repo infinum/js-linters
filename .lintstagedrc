@@ -1,0 +1,4 @@
+{
+	"*": ["prettier -c"],
+	"*.{ts,js}": ["eslint --max-warnings=0"]
+}
