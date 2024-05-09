@@ -7,7 +7,6 @@ export default createRule({
 		type: 'problem',
 		docs: {
 			description: 'Disallow React hooks in `pages` folder',
-			recommended: 'error',
 		},
 		schema: [],
 		messages: {

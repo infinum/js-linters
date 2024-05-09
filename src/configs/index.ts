@@ -1,9 +1,9 @@
 import angular from './angular';
 import chakraUi from './chakra-ui';
 import core from './core';
-import nextJs from './next-js';
 import react from './react';
 import typescript from './typescript';
+import nextJs from './next-js';
 
 export default {
 	core,

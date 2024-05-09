@@ -1,6 +1,35 @@
 import { TSESLint } from '@typescript-eslint/utils';
+import { RuleTester } from '@typescript-eslint/rule-tester';
 import { suite } from 'uvu';
 import * as assert from 'uvu/assert';
+
+// Disabled because there can by any number of arguments of any type passed to the function
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function once<T extends (...args: Array<any>) => ReturnType<T>>(
+	func: T
+): (...funcArgs: Parameters<T>) => ReturnType<T> {
+	let result: ReturnType<T>;
+	let called = false;
+
+	return function (this: ThisParameterType<T>, ...args: Parameters<T>): ReturnType<T> {
+		if (!called) {
+			called = true;
+			result = func.apply(this, args);
+		}
+
+		return result;
+	};
+}
+
+const initRuleTester = once(() => {
+	// Prevents the `rule-tester` from throwing an error when running tests in parallel. Without it the error is:
+	// Missing definition for `afterAll` - you must set one using `RuleTester.afterAll` or there must be one defined globally as `afterAll`.
+	RuleTester.afterAll = () => {
+		// Prevents the `rule-tester` from throwing an error below:
+		// Missing definition for `describe` - you must set one using `RuleTester.describe` or there must be one defined globally as `describe`.
+		RuleTester.describe = suite;
+	};
+});
 
 interface ICliOptions {
 	/**
@@ -82,9 +111,11 @@ const compareErrorMessagesToExpected = (
 		if (a.message < b.message) {
 			return -1;
 		}
+
 		if (a.message > b.message) {
 			return 1;
 		}
+
 		return 0;
 	});
 
@@ -123,9 +154,11 @@ const groupBySeverity = (results: Array<TSESLint.ESLint.LintResult>) =>
 					if (message.severity === MessageSeverity.Warning) {
 						agg.warnings.push(message);
 					}
+
 					if (message.severity === MessageSeverity.Error) {
 						agg.errors.push(message);
 					}
+
 					return agg;
 				},
 				{ warnings: [], errors: [] }
@@ -141,6 +174,8 @@ const groupBySeverity = (results: Array<TSESLint.ESLint.LintResult>) =>
 
 export const getTester = (options: ITesterOptions) => {
 	const { filePath, ...cliOptions } = options;
+
+	initRuleTester();
 	const cli = getCli(cliOptions);
 
 	const validate = async (
