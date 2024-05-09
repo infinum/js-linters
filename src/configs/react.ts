@@ -28,5 +28,6 @@ export default {
 		'react/prop-types': ['error', { skipUndeclared: true }],
 		'react/react-in-jsx-scope': 'off',
 		'react/self-closing-comp': ['warn', { component: true, html: true }],
+		'react/no-unknown-property': ['error', { ignore: ['css'] }],
 	},
 } satisfies TSESLint.Linter.Config;
