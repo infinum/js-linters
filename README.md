@@ -54,6 +54,7 @@ eslint-plugin-jsx-a11y@6.8 \
 @typescript-eslint/eslint-plugin@7.8 \
 @typescript-eslint/parser@7.8 \
 @next/eslint-plugin-next@14.2 \
+eslint-plugin-typescript-enum@2.1 \
 eslint-plugin-chakra-ui@0.11
 ```
 

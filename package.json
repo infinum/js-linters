@@ -48,6 +48,7 @@
 		"eslint-plugin-react": "~7.34.0",
 		"eslint-plugin-react-hooks": "~4.6.0",
 		"eslint-plugin-rxjs": "~5.0.3",
+		"eslint-plugin-typescript-enum": "~2.1.0",
 		"typescript": ">=3.3.1"
 	},
 	"peerDependenciesMeta": {
@@ -75,6 +76,9 @@
 		"eslint-plugin-chakra-ui": {
 			"optional": true
 		},
+		"eslint-plugin-typescript-enum": {
+			"optional": true
+		},
 		"typescript": {
 			"optional": true
 		}
@@ -100,6 +104,7 @@
 		"eslint-plugin-react": "7.34.1",
 		"eslint-plugin-react-hooks": "4.6.0",
 		"eslint-plugin-rxjs": "5.0.3",
+		"eslint-plugin-typescript-enum": "2.1.0",
 		"husky": "9.0.11",
 		"lint-staged": "15.2.2",
 		"plop": "~3.1.2",
