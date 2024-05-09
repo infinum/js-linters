@@ -1,6 +1,6 @@
 {
 	"$schema": "https://unpkg.com/@changesets/config@3.0.0/schema.json",
-  "changelog": ["@changesets/changelog-github", { "repo": "infinum/js-linters" }],
+	"changelog": ["@changesets/changelog-github", { "repo": "infinum/js-linters" }],
 	"commit": false,
 	"access": "restricted",
 	"baseBranch": "master",

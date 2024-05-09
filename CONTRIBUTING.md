@@ -14,7 +14,7 @@ cd js-linters
 2. Setup all the dependencies and packages
 
 ```sh
-npm install
+pnpm install
 ```
 
 ## Development
@@ -23,31 +23,28 @@ To ease the developer activity, we have created a few scripts that will help you
 
 ### Tooling
 
-- [NPM](https://npm.io/) to manage dependencies
+- [pNPM](https://pnpm.io/installation) to manage dependencies
 - [TypeScript](https://www.typescriptlang.org/) to bundle package
 - [uvu](https://github.com/lukeed/uvu) for testing configs and custom rules
-- [CommitLint](https://commitlint.js.org/#/) for enforsing [the conventional commit messages](https://www.conventionalcommits.org/en/v1.0.0/)
-- [Changeset](https://github.com/atlassian/changesets) for changes documentation, changelog generation, and release management.
+- [CommitLint](https://commitlint.js.org/#/) for enforcing [the conventional commit messages](https://www.conventionalcommits.org/en/v1.0.0/)
+- [Changesets](https://github.com/atlassian/changesets) for changes documentation, changelog generation, and release management.
 - [Plop](https://plopjs.com/) for generating new rules and configs
 
 ### Commands
 
-**`npm install`**: install all dependencies.
+**`pnpm install`**: install all dependencies.
 
-**`npm storybook`**: starts storybook server and loads stories in files that
-end with `.stories.tsx`.
+**`pnpm build`**: builds the package.
 
-**`npm build`**: builds the package.
+**`pnpm clean`**: removes the build output.
 
-**`npm clean`**: removes the build output.
+**`pnpm test`**: runs all tests.
 
-**`npm test`**: runs all tests.
+**`pnpm test:watch`**: runs all tests in watch mode.
 
-**`npm test:watch`**: runs all tests in watch mode.
+**`pnpm gen:config`**: runs plop script that generates a new config (name is provided as terminal prompt).
 
-**`npm gen:config`**: runs plop script that generates a new config (name is provided as terminal prompt).
-
-**`npm gen:rule`**: runs plop script that generates a new rule (name and description are provided as terminal prompt).
+**`pnpm gen:rule`**: runs plop script that generates a new rule (name and description are provided as terminal prompt).
 
 ### Commit Convention
 
@@ -70,5 +67,4 @@ All commits that fix bugs or add features need a test.
 
 ## License
 
-By contributing your code to the chakra-ui GitHub repository, you agree to
-license your contribution under the MIT license.
+By contributing your code to the @infinum/eslint-plugin GitHub repository, you agree to license your contribution under the MIT license.

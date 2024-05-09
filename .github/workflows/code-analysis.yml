@@ -1,0 +1,41 @@
+name: 🩺 Code Analysis
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  code-analysis:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 🗃️ Install corepack
+        run: corepack enable
+
+      - name: ⚡️ Install pNPM
+        uses: pnpm/action-setup@v3
+        with:
+          run_install: false
+
+      - name: 🎰 Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.12.2
+          cache: 'pnpm'
+
+      - name: 📦 Install dependencies
+        run: pnpm install --frozen-lockfile --prefer-offline --ignore-scripts
+
+      - name: 🏗️ Build the pacakge
+        run: pnpm build
+
+      - name: 🧐 Prettier
+        run: pnpm prettier:check
+
+      - name: 🫣 Lint
+        run: pnpm lint
+
+      - name: 🧪 Run Tests
+        run: pnpm test
