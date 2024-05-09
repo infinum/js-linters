@@ -1,0 +1,28 @@
+# Dependency
+node_modules
+pnpm-lock.yaml
+
+# Build
+dist
+
+# VSCode
+.vscode
+
+# Log
+*.log
+
+# Unsupported extensions
+*.md
+
+# Unsupported files
+.editorconfig
+.eslintignore
+.gitignore
+.prettierignore
+LICENSE
+
+# Unsupported directories
+.husky
+
+# Intentionally ignored
+*.hbs

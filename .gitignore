@@ -1,11 +1,18 @@
+# Dependencies
 node_modules
-jspm_packages
 
-typings/
+# IDE
+.vscode/settings.json
 
-package-lock.json
-yarn.lock
-
-lerna-debug.log
-
+# Output
 dist/
+
+# Typescript
+*.tsbuildinfo
+
+# Misc
+.DS_Store
+pnpm-debug.log*
+
+# Environment
+.env*
