@@ -1,9 +1,12 @@
 name: Release
 
 on:
-  push:
-    branches:
-      - master
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to run on'
+        required: true
+        default: 'master'
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
@@ -14,6 +17,8 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.inputs.branch }}
 
       - name: Setup Node.js 18.x
         uses: actions/setup-node@v3
