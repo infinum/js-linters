@@ -1,0 +1,17 @@
+name: 👁️‍🗨️ Static Code Analysis
+description: 'Run static code analysis tools'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: 🧐 Prettier
+      run: pnpm prettier:check
+      shell: bash
+
+    - name: 🫣 Lint
+      run: pnpm lint
+      shell: bash
+
+    - name: 🧪 Run Tests
+      run: pnpm test
+      shell: bash

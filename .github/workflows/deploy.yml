@@ -1,4 +1,4 @@
-name: 🚀 Release
+name: 🚢 Deploy
 
 on:
   workflow_dispatch:
@@ -6,8 +6,8 @@ on:
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
-  release:
-    name: Release
+  deploy:
+    name: Deploy
     runs-on: ubuntu-22.04
     steps:
       - name: 📥 Checkout Repository
@@ -21,10 +21,18 @@ jobs:
       - name: 👁️‍🗨️ Static Code Analysis
         uses: ./.github/actions/static-code-analysis
 
-      - name: 📢 Create Release Pull Request
-        id: changesets
-        uses: changesets/action@v1
-        with:
-          commit: 'ci: version packages'
+      - name: 🚩 Get version from package.json
+        run: |
+          echo "PACKAGE_VERSION=$(jq -r .version package.json)" >> $GITHUB_ENV
+
+      - name: 🏁 Create Git Tag
+        run: |
+          git tag $PACKAGE_VERSION
+          git push origin $PACKAGE_VERSION
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🚢 Publish
+        run: pnpm publish
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
