@@ -11,31 +11,8 @@ jobs:
       - name: 📥 Checkout Repository
         uses: actions/checkout@v4
 
-      - name: 🗃️ Install corepack
-        run: corepack enable
+      - name: 💻 Node setup
+        uses: ./.github/actions/node-setup
 
-      - name: ⚡️ Install pNPM
-        uses: pnpm/action-setup@v3
-        with:
-          run_install: false
-
-      - name: 🎰 Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20.12.2
-          cache: 'pnpm'
-
-      - name: 📦 Install dependencies
-        run: pnpm install --frozen-lockfile --prefer-offline --ignore-scripts
-
-      - name: 🏗️ Build the pacakge
-        run: pnpm build
-
-      - name: 🧐 Prettier
-        run: pnpm prettier:check
-
-      - name: 🫣 Lint
-        run: pnpm lint
-
-      - name: 🧪 Run Tests
-        run: pnpm test
+      - name: 👁️‍🗨️ Static Code Analysis
+        uses: ./.github/actions/static-code-analysis

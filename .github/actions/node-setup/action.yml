@@ -1,0 +1,28 @@
+name: 💻 Node setup
+description: 'Setup Node.js environment and install dependencies'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: 🗃️ Install corepack
+      run: corepack enable
+      shell: bash
+
+    - name: ⚡️ Install pNPM
+      uses: pnpm/action-setup@v3
+      with:
+        run_install: false
+
+    - name: 🎰 Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.12.2'
+        cache: 'pnpm'
+
+    - name: 📦 Install dependencies
+      run: pnpm install --frozen-lockfile --prefer-offline --ignore-scripts
+      shell: bash
+
+    - name: 🏗️ Build the package
+      run: pnpm build
+      shell: bash
