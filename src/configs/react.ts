@@ -5,7 +5,12 @@ export default {
 		jest: true,
 		es2022: true,
 	},
-	extends: ['plugin:react/recommended', 'plugin:react-hooks/recommended', 'plugin:jsx-a11y/recommended'],
+	extends: [
+		'plugin:react/recommended',
+		'plugin:react-hooks/recommended',
+		'plugin:jsx-a11y/recommended',
+		'plugin:typescript-enum/recommended',
+	],
 	settings: {
 		react: {
 			version: process.env.NODE_ENV === 'test' ? 'v18.2.0' : 'detect',
@@ -29,5 +34,7 @@ export default {
 		'react/react-in-jsx-scope': 'off',
 		'react/self-closing-comp': ['warn', { component: true, html: true }],
 		'react/no-unknown-property': ['error', { ignore: ['css'] }],
+		'typescript-enum/no-enum': 'warn',
+		'typescript-enum/no-const-enum': 'warn',
 	},
 } satisfies TSESLint.Linter.Config;
