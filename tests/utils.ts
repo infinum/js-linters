@@ -9,11 +9,11 @@ function once<T extends (...args: Array<any>) => ReturnType<T>>(
 	func: T
 ): (...funcArgs: Parameters<T>) => ReturnType<T> {
 	let result: ReturnType<T>;
-	let called = false;
+	let isCalled = false;
 
 	return function (this: ThisParameterType<T>, ...args: Parameters<T>): ReturnType<T> {
-		if (!called) {
-			called = true;
+		if (!isCalled) {
+			isCalled = true;
 			result = func.apply(this, args);
 		}
 
