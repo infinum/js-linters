@@ -46,10 +46,16 @@ Add this to you `eslint` config:
 Install the following packages:
 
 ```bash
-npm install --save-dev eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y @typescript-eslint/eslint-plugin@5 @typescript-eslint/parser@5 @infinum/eslint-plugin @next/eslint-plugin-next eslint-plugin-chakra-ui
+npm install -D -E \
+@infinum/eslint-plugin@2 \
+eslint-plugin-react@7.34 \
+eslint-plugin-react-hooks@4.6 \
+eslint-plugin-jsx-a11y@6.8 \
+@typescript-eslint/eslint-plugin@7.8 \
+@typescript-eslint/parser@7.8 \
+@next/eslint-plugin-next@14.2 \
+eslint-plugin-chakra-ui@0.11
 ```
-
-> 💡 NOTE: We are locking `@typescript-eslint/eslint-plugin` and `@typescript-eslint/parser` packages to version `5` until this issue is resolved: https://github.com/infinum/js-linters/issues/117
 
 Add this to you `eslint` config:
 
