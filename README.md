@@ -48,13 +48,13 @@ Install the following packages:
 ```bash
 npm install -D -E \
 @infinum/eslint-plugin@2 \
-eslint-plugin-react@7.34 \
-eslint-plugin-react-hooks@4.6 \
-eslint-plugin-jsx-a11y@6.8 \
-@typescript-eslint/eslint-plugin@7.8 \
-@typescript-eslint/parser@7.8 \
-@next/eslint-plugin-next@14.2 \
-eslint-plugin-typescript-enum@2.1 \
+eslint-plugin-react@7 \
+eslint-plugin-react-hooks@4 \
+eslint-plugin-jsx-a11y@6 \
+@typescript-eslint/eslint-plugin@7 \
+@typescript-eslint/parser@7 \
+@next/eslint-plugin-next@14 \
+eslint-plugin-typescript-enum@2 \
 eslint-plugin-chakra-ui@0.11
 ```
 
