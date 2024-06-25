@@ -1,5 +1,11 @@
 # @infinum/eslint-plugin
 
+## 2.1.0
+
+### Minor Changes
+
+- [#135](https://github.com/infinum/js-linters/pull/135) [`c9cff87`](https://github.com/infinum/js-linters/commit/c9cff8706b62d728797776de11434539416a60ac) Thanks [@kamdubiel](https://github.com/kamdubiel)! - Allow wider scope of versions in peerDependencies
+
 ## 2.0.0
 
 ### Major Changes
