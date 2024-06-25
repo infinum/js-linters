@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       eslint-plugin-chakra-ui:
-        specifier: ~0.11.0
+        specifier: ^0.11.0
         version: 0.11.0(eslint@8.57.0)(typescript@5.4.5)
     devDependencies:
       '@changesets/changelog-github':
