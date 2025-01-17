@@ -1,5 +1,11 @@
 # @infinum/eslint-plugin
 
+## 2.1.1
+
+### Patch Changes
+
+- [#137](https://github.com/infinum/js-linters/pull/137) [`2e7b2ad`](https://github.com/infinum/js-linters/commit/2e7b2ad016dcf762e40b81e0091c44e56486723b) Thanks [@danipavic](https://github.com/danipavic)! - Updated `@typescript-eslint/naming-convention` format for `typeAlike` selector to `PascalCase`
+
 ## 2.1.0
 
 ### Minor Changes
