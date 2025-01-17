@@ -49,7 +49,7 @@ export default {
 			},
 			{
 				selector: 'typeLike',
-				format: ['StrictPascalCase'],
+				format: ['PascalCase'],
 			},
 		],
 		'@typescript-eslint/no-inferrable-types': 'warn',
