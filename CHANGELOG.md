@@ -1,5 +1,11 @@
 # @infinum/eslint-plugin
 
+## 2.1.2
+
+### Patch Changes
+
+- [#140](https://github.com/infinum/js-linters/pull/140) [`69c60de`](https://github.com/infinum/js-linters/commit/69c60de8628060190df68183e361d723c7e435a0) Thanks [@danipavic](https://github.com/danipavic)! - Updated `@typescript-eslint/naming-convention` prefixes for `boolean` variables to allow `are` and `can`
+
 ## 2.1.1
 
 ### Patch Changes
