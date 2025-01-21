@@ -39,7 +39,7 @@ export default {
 				selector: 'variable',
 				types: ['boolean'],
 				format: ['StrictPascalCase'],
-				prefix: ['is', 'should', 'has'],
+				prefix: ['is', 'should', 'has', 'are', 'can'],
 			},
 			{
 				selector: 'variable',

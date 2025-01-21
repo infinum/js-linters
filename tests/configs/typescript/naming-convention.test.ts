@@ -62,6 +62,8 @@ test('should allow StrictPascalCase boolean variable naming with is, should, has
 	await validate(`const isTest = true;`);
 	await validate(`const shouldTest = true;`);
 	await validate(`const hasTest = true;`);
+	await validate(`const areAllTasksCompleted = true;`);
+	await validate(`const canNavigate = true;`);
 });
 
 test('should disallow non-StrictPascalCase boolean variable naming with is, should, has prefix', async () => {
@@ -86,11 +88,13 @@ test('should allow destructed boolean variable naming without is, should, has pr
 	await validate(`const { test: isTest } = { test: true };`);
 	await validate(`const { test: shouldTest } = { test: true };`);
 	await validate(`const { test: hasTest } = { test: true };`);
+	await validate(`const { test: areAllTasksCompleted } = { test: true };`);
+	await validate(`const { test: canNavigate } = { test: true };`);
 });
 
 test('should disallow destructed renamed boolean variable naming without is, should, has prefix', () =>
 	validate(`const { test: test2 } = { test: true };`, [
-		'Variable name `test2` must have one of the following prefixes: is, should, has',
+		'Variable name `test2` must have one of the following prefixes: is, should, has, are, can',
 	]));
 
 /**
