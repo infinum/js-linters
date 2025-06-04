@@ -10,7 +10,33 @@ export default {
 		jasmine: true,
 		node: true,
 	},
-	extends: ['plugin:rxjs/recommended'],
+	extends: ['plugin:rxjs/recommended', 'plugin:jasmine/recommended', 'plugin:@angular-eslint/recommended'],
+	plugins: ['jasmine'],
+	overrides: [
+		{
+			files: ['*.html'],
+			extends: ['plugin:@angular-eslint/template/all'],
+			rules: {
+				'@angular-eslint/template/conditional-complexity': 'warn',
+				'@angular-eslint/template/cyclomatic-complexity': 'warn',
+				'@angular-eslint/template/interactive-supports-focus': 'warn',
+				'@angular-eslint/template/click-events-have-key-events': 'warn',
+				'@angular-eslint/template/mouse-events-have-key-events': 'warn',
+				'@angular-eslint/template/i18n': 'off',
+				'@angular-eslint/template/prefer-contextual-for-variables': 'off',
+				'@angular-eslint/template/prefer-static-string-properties': 'off',
+				'@angular-eslint/template/no-interpolation-in-attributes': 'off',
+				'@angular-eslint/template/no-call-expression': 'off',
+				'@angular-eslint/template/no-inline-styles': [
+					'error',
+					{
+						allowNgStyle: true,
+						allowBindToStyle: true,
+					},
+				],
+			},
+		},
+	],
 	rules: {
 		'prefer-arrow/prefer-arrow-functions': 'off',
 		'rxjs/finnish': [
@@ -34,4 +60,4 @@ export default {
 		'rxjs/no-implicit-any-catch': 'off',
 		'rxjs/no-sharereplay': 'off',
 	},
-} satisfies TSESLint.Linter.Config;
+} satisfies TSESLint.Linter.ConfigType;
