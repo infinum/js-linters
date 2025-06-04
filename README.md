@@ -27,7 +27,7 @@ However, we can also extend `.eslintrc` with additional configs. The idea is to 
 Install the following packages:
 
 ```bash
-npm install --save-dev @angular-eslint/eslint-plugin @angular-eslint/eslint-plugin-template eslint-plugin-rxjs eslint-plugin-jasmine @infinum/eslint-plugin
+npm install --save-dev @angular-eslint/eslint-plugin @angular-eslint/eslint-plugin-template @angular-eslint/template-parser eslint-plugin-rxjs eslint-plugin-jasmine @infinum/eslint-plugin
 ```
 
 Add this to you `eslint` config:
