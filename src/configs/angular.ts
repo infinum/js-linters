@@ -10,7 +10,8 @@ export default {
 		jasmine: true,
 		node: true,
 	},
-	extends: ['plugin:rxjs/recommended'],
+	extends: ['plugin:rxjs/recommended', 'plugin:jasmine/recommended', 'plugin:@angular-eslint/all'],
+	plugins: ['jasmine'],
 	rules: {
 		'prefer-arrow/prefer-arrow-functions': 'off',
 		'rxjs/finnish': [
@@ -34,4 +35,4 @@ export default {
 		'rxjs/no-implicit-any-catch': 'off',
 		'rxjs/no-sharereplay': 'off',
 	},
-} satisfies TSESLint.Linter.Config;
+} satisfies TSESLint.Linter.ConfigType;
