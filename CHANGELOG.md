@@ -1,5 +1,11 @@
 # @infinum/eslint-plugin
 
+## 3.0.0
+
+### Major Changes
+
+- [#143](https://github.com/infinum/js-linters/pull/143) [`0b82ca8`](https://github.com/infinum/js-linters/commit/0b82ca802217d0eb345d15e73b1ba0ae2cbec28e) Thanks [@danipavic](https://github.com/danipavic)! - Updated `angular` config and added `angular-template` config for linting HTML files. Reintroduced `jasmine` plugin.
+
 ## 2.1.2
 
 ### Patch Changes
