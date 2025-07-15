@@ -1,5 +1,11 @@
 # @infinum/eslint-plugin
 
+## 3.0.1
+
+### Patch Changes
+
+- [#145](https://github.com/infinum/js-linters/pull/145) [`ba79715`](https://github.com/infinum/js-linters/commit/ba797155bc0eb27bbd49b9a18f13ac1aeacdd908) Thanks [@danipavic](https://github.com/danipavic)! - Updated `Angular` peer dependencies versions in order to allow usage with versions 19 and higher.
+
 ## 3.0.0
 
 ### Major Changes
